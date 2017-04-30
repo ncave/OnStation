@@ -1,0 +1,28 @@
+A US $20 dollar donation would be much appreciated.  It will help me pay for my internet and web space.  See the About box for details.
+You can use the blunder detection features in On Station to find problems in your surveys.
+You double click on a station name to find out additional information about it.
+You can use standard search syntax to look through survey comments and survey summary data.  Look in the Query menu for more information.
+You can color surveys by the depth below surface.
+Hold down the shift key while dragging the mouse left or right to zoom in and out.
+You can overlay a surface on your system by double clicking on the surface folder in the view on the right.
+You can add bookmarks to save common views.
+A US $20 dollar donation would be much appreciated.  It will help me pay for my internet and Web space.  See the About box for details.
+You color a leg or folder by selecting it and selecting a color from the color dialog box.
+You can use the up/down/left/right information to turn the line plot into solid passages.  Select Drawing Options in the Draw Menu.
+The On Station help file has numerous screen snapshots.  It is worth taking a minute to see if there are any features you haven't found yet.
+The Source Code for On Station is available.  Email taco@theos.com to find out more.
+You can turn off sections of your survey by selecting the disable option in the color box.  Disabling excludes the survey from all calculations.
+A US $20 dollar donation would be much appreciated.  It will help me pay for my internet and Web space.  See the About box for details.
+You can save a survey as a VRML file so that you can put it on a web page.
+Printing does not support solid passages.  Any OpenGL or DirectX experts out there are free to give me advice on this one!
+Try naming your surveys by starting with the year.  This makes it a lot easier to keep unique names.
+You can tie in entrance to GPS locations or Topo locations by adding a fixed point at those locations.
+A US $20 dollar donation would be much appreciated.  It will help me pay for my internet and Web space.  See the About box for details.
+On Station works best with lots of memory.  A minimum of 16mb is recommended, but 32 is better.
+You can close loops to get rid of survey errors.  This takes a while on slower systems or with large caves.
+You can right click anywhere to get a context sensitive menu.
+You can convert files from other programs using the seperate Rosetta Stal file conversion utility.
+WinKarst, Walls, Survex, On Station, and Compass all plan to use a common file format to make it easier for you to switch programs without losing your data.
+
+
+

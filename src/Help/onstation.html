@@ -1,0 +1,1015 @@
+<HTML>
+<!-- HTML Source for Taco van Ieperen-->
+
+<!-- Copyright 1996-1998 Taco van Ieperen of Calgary,  Alberta,  Canada.-->
+
+<!-- All rights reserved.-->
+
+<HEAD>
+<TITLE>On Station Cave Mapping Software - Help</TITLE>
+</HEAD>
+<BODY>
+<body bgcolor="#ffffff" text="#000000">
+
+
+
+<center>
+<p><font size=+3 color="#ff0000">On Station 3.1 Online Help</font><br>
+<font size=-1><I>Last updated: Oct 10, 1998</I></font></p>
+</center>
+
+
+<a name="contents">
+<P><h2><font color=#"ff0000">Contents</font></h2></p></a>
+
+
+
+<p>1.0 - <A HREF="#whynotstandardhelp">Why this is not a standard Help File</A></p>
+
+
+<P>2.0 - <A HREF="#overview">Overview of <b>On Station</b></A></p>
+
+
+<P>3.0 - <A HREF="#layout">Layout of the screen</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3.1 - <A HREF="#layoutcolorschemes">Color Schemes</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3.2 -<A HREF="#layoutdatatree">Data Tree</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3.3 - <A HREF="#layoutfixedpoints">Fixed Points</A></p>
+
+
+<P>4.0 - <A HREF="#caveview">Cave View Area</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;4.1 - <A HREF="#caveviewscale">Setting the Scale</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;4.2 - <A HREF="#caveviewsetviewangle">Setting the Viewing Angle</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;4.3 - <A HREF="#caveviewsetcenter">Setting the Center of the View</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;4.4 - <A HREF="#caveviewbookmark">Bookmarks</A></p>
+
+<P>5.0 - <A HREF="#surfdata">Surface Data Explained</A></p>
+
+
+<P>6.0 - <A HREF="#import">Exchanging Data With Other Programs</A></p>
+
+
+<P>7.0 - <A HREF="#printing">Printing</A></pre></b></P>
+
+
+<P>8.0 - <A HREF="#loop">Closing Loops</a> (Error Correction)</p>
+
+
+<P>9.0 - <A HREF="#SEARCH">Queries and Searches</A></p>
+
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;9.1 - <A HREF="#surveysearches">Survey Level Searches</A></p>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;9.2 - <A HREF="#stationcommentsearch">Station Comment Searches</A></p>
+
+
+<P>10.0 - <A HREF="#systeminfo">Getting Information About the System</A></p>
+
+<P>11.0 - <A HREF="#surveys">Entering Surveys</A></p>
+
+<P>12.0 - <A HREF="#tips">Tips from the Experts</A></p>
+
+
+<br>
+
+<A NAME="whynotstandardhelp">
+<P><h2><font color="#ff0000">1.0 - Why This is Not a Standard Help File</font></h2></p></A>
+<P>This is not a standard context sensitive help file.  I don't have time for that. If you think one is necessary, please
+write one and send it to me.  I have decide to adopt HTML for my help files.  This
+allows me to provide URLs to updates and bug lists.  It also takes a lot less time to code
+then all the Microsoft .HLP file nonsense.</p>
+
+
+
+<P>This manual is intended to be far more useful then
+a help file. I have explained all of the key concepts in <b>On Station</b>.
+The only thing missing is stupid explanations of how to resize
+a window or how the File Save Dialog works. I'm too busy and nobody
+reads that crap anyway.  So enjoy the help.  I hope it answers all your questions!</p>
+
+
+
+
+
+<A NAME="overview">
+<P><h2><font color="#ff0000">2.0 - Overview of <b>On Station</font></h2></p></b></A>
+
+
+<P>I assume that if you are reading up on <b>On Station</b>,
+you probably already know how a cave is mapped and what is involved
+in dealing with the data. If you do not, then there are other
+sources on the Web which can be of great assistance in these areas.
+I will assume a knowledgeable reader and educate on the software
+rather the survey techniques.</p>
+
+<P><b>On Station</b> helps you manage the data which is produced
+when you map caves. The basic working unit in <b>On Station</b> is the
+Survey. Surveys contain Shots, Comments, and background information
+such as who was involved and when the survey was done.</p>
+
+<P>Most people will use <b>On Station</b> to plot Surveys in
+three dimensions. <b>On Station</b> has excellent support for this.</p>
+<ul>
+
+<LI> A simple yet powerful interface lets you rotate,
+zoom, and move the system so that you can examine it from various
+angles.</li>
+
+<LI> Loop closure logic allows you to perform error averaging to get rid of the gaps in surveys which double back on themselves.</li><br><br>
+
+<LI> Sophisticated coloring schemes allow you to color surveys or interesting features for maximum effect or visibility.</li><br><br>
+
+<LI> Advanced OpenGL support uses Up/Down/Left/Right data to give you an indication of passage dimensions.</li><br><br></p>
+</UL>
+<br>
+
+
+
+<P><b>On Station</b> is intended to allow you to manage far
+more then just one cave, however. An intuitive hierarchical system
+of organization lets you manage data for large projects. <b>On Station</b>
+has been used extensively in the field in Mexico in the Cerro
+Blanco project. We have over 50km in several system and many smaller
+caves. Entrances are tied together by surface surveys or GPS locations.
+
+<b>On Station</b> has been used in the field on this project and the
+lessons have been used to beef up <b>On Station</b>'s support for large
+projects.</p>
+
+
+<ul>
+
+
+<LI> You can use <font size=-1>GPS</font> data or surface surveys to set
+up systems consisting of many caves in the same area.</li><br><br>
+
+
+<LI> You can enter surface topography so that you
+can see underground features in relation to the surface.</li><br><br>
+
+
+<LI> You can easily get statistics or views of small subsets of a larger system.</li><br><br>
+
+
+<LI> You can perform queries on you data. For example, you could color
+all areas that contain &quot;Lead <font size=-1>AND NOT</font> Crawling&quot;
+in red.</li><br><br></p>
+
+
+</ul>
+<br>
+
+I feel that I have succeeded in my goal of making the friendliest and easiest to learn
+cave software available, without compromising on power or features.  On Station can
+handle projects of any size and complexity.  And the simple intuitive interface
+will allow you to spend more time working with your data, and less time fighting with
+your tools.
+
+<A NAME="layout">
+<h2><font color="#ff0000">3.0 - Screen Layout</font></h2>
+<p><b>On Station</b> has a pretty easy screen layout. On the
+left side of your main window is an displaying all of the data in your system.
+The sections below explain what the controls in this area do.
+<center><a href="img00001.gif"><IMG SRC="img00001.gif" alt="screen shot of data tree"></a></p>
+Boy, does that ever make it easy to organize data!</center>
+
+
+</tr></table></p>
+
+
+
+
+<A NAME="layoutcolorschemes">
+
+
+<br><BR>
+
+<P><h3><font color="#ff0000">3.1 - Color Schemes</font></h3></p></A>
+
+
+<P>The first control is a Combo Box with a list of the color
+schemes. Simply type in a new name if you don't like the existing
+ones. There are eight named color schemes and two special ones. Each
+of the name color schemes tracks an independent set of colors for
+each survey. You can set the color of a survey simply by selecting
+it and pressing a color. The survey picture shows which color
+was selected. If you select a folder, all surveys in that folder
+will be set to the selected color.</p>
+
+<center><a href="img00002.gif"><IMG SRC="img00002.gif" alt="color schemes selection window"></a></p>
+Changing colors is simple!</center></p>
+
+<P>In the two special color schemes, surveys are colored
+based on Age (the date that the survey was done), or Depth. You
+can configure which colors are associated with which ages or depths
+in the Configure option under the Colors menu. Alternatively,
+you can right click anywhere in the color area or press the configure
+button.</p>
+
+
+<center><P><a href="img00003.gif"><IMG SRC="img00003.gif" alt="configure color schemes window"></a></p>
+Configuring age and depth colors</center>
+
+<P>Two colors have a special meaning. <b>Hide</b> hides a survey
+so that it is not shown. The survey is still used in calculations,
+so branches off that survey are still drawn. <b>Disable</b> temporarily
+removes a survey from all calculations. Anything that needs to
+traverse that survey to be shown is not drawn. Disabling the middle
+section in a linear cave would show only half the cave. Hiding
+it would show the full cave with the middle section not drawn. Disable
+is often used when you have loop closure errors and you want to
+see how various loops effect the result.</p>
+
+
+
+
+<A NAME="layoutdatatree">
+<br>
+<br>
+
+<P><h3><font color="#ff0000">3.2 - Data Tree</font></h3></p></A>
+
+
+<P>Below the color area is the survey data tree.
+It contains all of the data in your system. First is
+a list of all the surveys. They are stored in hierarchical folders
+much like files in a directory tree. Any action done to a folder
+is done to all surveys contained in it.</p>
+
+
+<P>Folders and surveys can be:</p>
+<ul>
+<p><LI> Reordered by dragging and dropping them. </li>
+
+<LI> Renamed by clicking on the name twice, slowly. </li>
+
+<LI> Deleted by pressing Del or selecting Delete from the edit menu. </li>
+
+<LI> Added by selecting Survey or Folder from the Insert menu. </li>
+
+<LI> Cut/Copied, and pasted.</li>
+
+<LI> Edited by double clicking on them or selecting Edit under the Edit menu. </li>
+
+<LI> Summarized by clicking Survey Info in the edit menu. This will show you how many shots a folder contains and
+how long those shots are.</li></p>
+
+
+</UL>
+
+
+<P>You can also right click on the folder portion to get a menu of all the available options.</p>
+
+
+<A NAME="layoutfixedpoints">
+<P><B><h3><font color="#ff0000">3.3 - Fixed Points</font></h3></B></A>
+
+<P>Below the folders is a list of Fixed Points. Fixed
+points are stations which are at a known location. This location
+could be a GPS reading, or simply some numbers that you have assigned
+to it. The system will ensure that the named station is drawn
+at the specified location on the map. Fixed points are extremely
+useful if you have multiple entrances to a system, or when you
+have surface surveys that tie into well known locations.</p>
+
+<P><center><a href="img00004.gif"><IMG SRC="img00004.gif" alt="fixed points"></a></p>
+Large system leading away from a fixed point at the entrance</center>
+
+<br>
+<p>Fixed points are drawn as pins on the main survey so that you can easily see where they are. You can turn this off
+under the drawing menu if it is annoying.</p>
+
+<P>Fixed points require a Station Name and coordinates.
+If the station name you entered is invalid, the fixed point is
+shown in the fixed point list with an ? through it to indicate
+a problem. You will also get a dialog box warning you that the
+fixed point is not associated with any station.</p>
+
+<center><P><a href="img00005.gif"><IMG SRC="img00005.gif" alt="Station Name error"></a></p>
+Two fixed points, but one of them isn't valid
+</table></p></center>
+
+<P>Fixed Points can be:</p>
+<UL>
+<p><LI> Editing by double clicking on them or by selecting
+Edit under the Edit menu. </li>
+<LI> Deleted by pressing Del or by selecting Delete from the Edit menu. </li>
+<LI> Added from the Insert Menu.</li></p>
+
+</UL>
+
+
+<P> The final item in the tree is the surface. The surface can be:</p>
+
+
+<ul>
+
+
+<LI> Reset to empty by pressing Del. </li>
+
+
+<LI> Edited by Double clicking on it or by selecting Edit in the Edit menu. </li>
+</UL>
+
+
+
+
+<A NAME="caveview">
+<P><h2><font color="#ff0000">4.0 - Cave View Area </h2></font></p>
+
+
+<P>Next to the data view area is the cave view area.
+It is a large black window which should be displaying you cave
+if you have a file open. The view area can be made bigger by pressing
+Ctrl+F or by hitting the full screen button. If you do this, all
+menus, toolbars, and so forth will be temporarily removed so that
+the view may occupy the whole screen. Pressing <b>Escape</b> or the <b>End
+Full Screen</b> button ends this mode.</p>
+
+
+<center><P><a href="img00006.gif"><IMG SRC="img00006.gif" alt="cave view area with solid passages">
+</a><br>
+Cave view area with solid passages. Pretty isn't it?</p>
+<br>
+
+<P>
+<a href="img00007.gif"><IMG SRC="img00007.gif" alt="cave view area in line plot"></a><br>
+Line plot - not as pretty, but much easier to work with</p>
+<br>
+</center>
+
+
+<P>The cave consists of the basic cave data, plus any
+
+
+optional items which have been selected, and is drawn in the colors
+
+
+described by the current color scheme. It is shown at the current
+
+
+magnification, panning, and viewing angle. Optional items are
+
+
+as follows:</p>
+
+
+<ul>
+<p><LI> Surface Data</li>
+<LI> Fixed Point Pins</li>
+<LI> Dashed Red Lines indicating loop closure errors</li>
+<LI> Surface Surveys</li>
+<LI> Survey Station Names</li><br><br></p>
+</UL>
+
+
+<A NAME="caveviewscale">
+
+<br>
+<br>
+<P><h3><pre><font color="#ff0000">4.1 - Setting the Scale </pre></font></h3></p></B></A>
+
+
+<P>
+Scale is measure in Meters/CM or Feet per Inch. It
+is roughly correct when on-screen, and very accurate when printed.
+The status bar and the ruler on the left hand side of the Cave
+View Area both show the current scale.</p>
+
+
+
+
+<P>You can set the scale in a number of different ways:</p>
+
+<ul>
+<p><LI> Press the Zoom In/Zoom Out buttons on the main toolbar. </li>
+<LI> Right Click on the ruler and select a scale. </li>
+<LI> Right Click on the drawing area. </li>
+<LI> Hold down the shift key and drag the mouse left or right to zoom in real-time. </li>
+<LI> Select Set Exact View from the Edit menu and enter the scale directly. </li></p>
+</UL>
+
+<A NAME="caveviewsetviewangle">
+<br>
+<P><h3><font color="#ff0000">4.2 - Setting the Viewing Angle</font></h3></p></A>
+
+
+<P>The viewing angle is expressed as a rotation and
+a tilt. The system starts of with north going up the screen (rotation=0).
+It is then rotated by the rotation (90 degrees would leave the
+system with East (going up the screen). Finally, it is tilted forwards
+or back. A 90 degree tilt shows the system side on. East would
+now be in the back and West in the front. A -90 degree tilt shows
+the same system upside down. East would be in the front and West
+in the back.</p>
+
+
+<P>The current view angles are shown in the status bar
+and are also reflected in the On-Screen compass. You can set the view angle in a number of different
+ways:</p>
+
+<ul>
+<li>Right click on the drawing area.</li>
+<li>Right click on the compass.</li>
+<li>Drag the needle or the tilt indicator on the compass.</li>
+<li>Select Set Exact View from the Edit menu and enter
+the tilt and rotation directly.</li>
+<li>Hold down the right arrow key and drag up and down
+to tilt/left and right to rotate. If you press the animate button
+or select the animate menu option, the system will continue to
+turn until you click on the drawing area or press the button again.</li></p>
+</ul>
+
+<A NAME="caveviewsetcenter">
+
+<br>
+
+<br>
+
+<P><h3><font color="#ff0000">4.3 - Setting the Center of the View (Pan)</font></h3></p></A>
+
+<P>The current view center is also indicated in the
+status bar. The view center is the location which is drawn in
+the middle of the screen. Any rotations and so forth occur around
+this point.</p>
+
+<center><P><a href="img00008.gif"><IMG SRC="img00008.gif"alt="setting the center of view"></a></p>
+Setting the center of an image
+</center>
+
+
+<P>You can set the center by:</p>
+
+
+<UL>
+
+
+<p><LI> Clicking on the drawing surface and dragging
+the mouse around.</li>
+
+
+<LI> Select Edit, Set Center to set the view center
+to a particular station. </li>
+
+
+<LI> Select Edit, Set Exact View to enter exact coordinates
+for the center. </li>
+
+
+<LI> Double click on a station and press the Center
+button. </li>
+
+
+
+<LI> Right Click on the Drawing Surface and Select
+Center. </li></p>
+
+
+</ul>
+
+
+
+
+<A NAME="caveviewbookmark">
+
+<br>
+
+<br>
+
+<P><h3><font color="#ff0000">4.4 - Bookmarks </font></h3></p></A>
+
+
+<P>A cave system can be extremely large and spread out.
+Bookmarks allow you to save key views of a large system. At any
+time you can simply select Edit, Bookmark to go to an existing
+bookmark or set a new one for the current view. Bookmarks are
+saved with your data. Bookmarks remember the Scale, Center, and
+Rotation of the system but do not track colors or optional items
+which were turned on and off.</p>
+<center><P><a href="img00009.gif"><IMG SRC="img00009.gif" alt="bookmark entry box"></a></p>
+Entering a bookmark to save a neat view
+</center>
+
+
+<A NAME="surfdata">
+<P><h2><font color="#ff0000">5.0 - Surface Data Explained</font></h2></p></A>
+
+
+<P>
+<b>On Station</b> allows you to define the surface which
+exists over your system. You can turn the display of this surface
+on and off in the Drawing menu.</p>
+
+
+
+
+<P>
+Surface data is specified by providing altitudes
+at various locations on a grid. A grid is defined in terms of
+the lower left corner and a size. The lower left corner could
+be either UTM coordinates or some arbitrary coordinate system.
+</p>
+
+
+
+<P>
+Typically, the way you would enter surface data is
+to use a photocopier to blow up a map of your caving area and
+then draw a grid onto it. You then enter the altitudes at the
+various grid points into your system. It sucks, it takes a long
+time, but it sure looks good when you are done. Typically a grid
+size of 100m is a reasonable scale.</p>
+
+
+
+
+<P>
+Alternately, you can buy Surface elevation data from
+various sources. You may even be able to get it for free if you
+live in the right country. In this case, you can use these number
+and save yourself a lot of work. If you get some of these data
+files please let me know so I can add support for reading them
+directly.</p>
+
+
+<P>
+To edit surface data, double click on the surface
+icon on the tree control on the left side of the main display
+window. The surface data editor has two tabs. One tab lets you
+set the size of the surface, the reference coordinates, and the
+size of each grid entry. The other tab lets you enter the actual
+surface data values.</p>
+
+
+
+
+<P>
+<center>
+<IMG SRC="img00010.gif" alt="edit surface data window">
+<br>
+Entering surface data: What fun!</p>
+</center>
+
+
+
+
+<P>
+Surfaces can have an declination. If you specify
+a declination, then the grid squares will run in the declination
+direction rather the directly N/S. Some topographical maps do
+not run grid lines directly North/South, so this function can
+be a life saver. The declination that you will use is often called
+the &quot;Grid North&quot; on topographical maps.</p>
+
+
+<P>
+By default the cave system is drawn centered on the
+surface. To change this simply add a fixed point to tie an entrance
+into a known location on the surface.</p>
+
+
+<A NAME="import">
+<P><h2><font color="#ff0000">6.0 - Exchanging Data With Other Programs</font></h2></p></A>
+
+
+<P>
+<b>On Station 3.0</b> supports Cave Data Interchange files.
+These files follow a format that Larry Fish and myself have worked
+on. It is intended to be easy to work with yet powerful enough
+to store anything that you may need. Hopefully all of the major
+authors of caving software will support this standard so that
+you can read <b>On Station</b> files in other programs and Vice Versa.
+</p>
+
+
+
+
+<P>
+Many people, however, have data from programs such
+as SMAPS which are obsolete and unsupported. To assist with this I have provided a file
+import utility called the Rosetta Stal.  You can download this from the
+main On Station home page.</p>
+To run the Rosetta Stal from On Station, select Import from the file menu.  The Rosetta
+Stal does file conversions, which means that your original data is not touched.  It simply
+reads the orginal file and writes a CDI file.  You can then load the CDI file
+into On Station.
+<P>
+If you have any problems with this process, or run
+into valid files that do not work, please email me with a
+description of the problem and a copy of the file so that the
+import program can be updated.</p>
+
+
+<A NAME="printing">
+<h2><font color="#ff0000">7.0 - Printing</font></h2></p></A>
+
+
+<P>
+<b>On Station</b> supports both color and monochrome printers.
+
+
+<b>On Station</b> will print using you current view settings. Essentially,
+
+
+you set you view to the angle, scale, and coloring which you would
+
+
+like, and then you print it. What you see is what you get, except
+
+
+that it will be split up over multiple pages and include rulers,
+
+
+a North Arrow, a Scale bar, and other items that you ask for.
+</p>
+
+
+
+
+<P>
+You can control all of the optional items which are
+displayed by selecting Configure Page in the File menu.</p>
+
+
+
+
+<P><b>On Station</b> 3.0 currently is only able to produce
+line plots. This is a known problem and I am planning to fix this
+eventually. The problem is due to a bug in the Microsoft
+implementation of OpenGL.</p>
+
+
+
+
+<br><br><br>
+
+
+<A NAME="loop">
+<h2><font color="#ff0000">8.0 - Closing Loops (Error Correction)</font></h2>
+
+
+<P>
+Loop closure closes the loops caused by survey errors
+and produces a highly accurate model of the resulting cave. You
+can turn loop closure on and off under the Drawing menu. Loop
+closure data is recalculated whenever data for a view changes.
+It can be quite a lengthy calculation, so I advise turning it
+off whenever you are preparing to do editing. One you have closed
+a system, the closed data will be remembered until you make changes
+to the data.</p>
+
+
+
+
+<P>
+<b>On Station</b>'s loop closure makes use of standard instrument
+errors. These are provided in the Instruments tab of the survey
+edit dialog. These settings allow you to specify what the accuracy
+of various instruments in a survey is. For instance, I have done
+a lot of surveying where we were in large, dry passages and took
+front and back readings. These surveys will have a high degree
+of accuracy (say +-0.5 degrees on the compass).</p>
+
+
+
+
+<P>
+In the same system, there have been surveys where
+we were clinging to the walls of a river trying to read instruments
+in the spray. Obviously, these surveys are not as accurate. In
+this case, compass readings may be good to +-5 degrees.</p>
+
+
+<P>
+<center>
+<IMG SRC="img00011.gif" alt="edit survey leg -instruments window">
+Entering instrument errors
+</center>
+</p>
+
+
+
+<P>Standard errors identify the range of one standard
+deviation from the reading. If you don't understand what this
+means, I am unlikely to be able to explain it. Suffice it to say
+that this is a measurement that would make a statistician very
+happy. </p>
+
+
+<P>
+Practically speaking, surveys which high errors will
+be adjusted much more then surveys with low errors. This means
+that you could survey main branches with highly accurate methods
+and given them a low error rate and then survey the side branches
+more quickly. <b>On Station</b> will then use the main branches as the
+structure for your system and pull the side branches into shape
+to match them.</p>
+
+<A NAME="SEARCH">
+<h2><font color="#ff0000">9.0 Queries and Searches</font></h2></p>
+
+
+<P>
+Large surveys can contain a lot of information. In
+traditional cave software systems, most of this information vanishes
+when you enter it into the computer. Sure, you can enter comments
+into a survey, but who really sees that information and how do
+you use it?</p>
+
+
+
+
+<P>
+<b>On Station</b> changes that by providing sophisticated
+search features. Searches are done on a survey level or on a shot
+level.</p>
+
+
+
+
+<A NAME="surveysearches">
+<P><h3><font color="#ff0000">9.1 - Survey Level Searches</font></h2></p></A>
+
+
+
+
+<P>
+Survey level searches search for surveys which match
+particular characteristics. For example, if you want to find all
+of the surveys you were part of, you can do that. If you want
+to find all of the surveys that you were part of that contained
+MUD in the description, you can do that too (maybe to avoid those spots!).</p>
+
+
+
+<P>
+You set up your query in the Query, Surveys menu.
+A form provides you with a set of empty fields into which you
+can enter search terms. These fields correspond more or less to
+the fields you enter when you set up a survey. In each field you
+can enter optional search terms. These terms follow standard wording
+like you would use on an Internet search engine. Key words supported
+are NOT, AND, OR, (,),&quot;&quot;. Examples of valid search strings
+ would be:</p>
+
+
+<ul>
+
+<P>
+&quot;Blowing Lead&quot; AND NOT wet.</p>
+
+
+<P>
+Blowing OR (&quot;Good Lead&quot; AND NOT (Crawling OR Nasty)</p>
+</ul>
+
+
+
+<center><P>
+<IMG SRC="img00012.gif" alt="query surveys - search conditions"></p>
+Only On Station can do this!</center>
+
+<P>
+When you press the search button, the tree view on
+the left hand side of the screen is updated to show only the surveys
+which match your search. The background of the dialog changes
+to a question mark pattern to show that you are seeing a query
+specific view. A text description of the survey is on the bottom
+of the view to let you know what you are seeing.</p>
+
+It will stay in this view until you press Escape
+or select End Search from the Query menu. The nice thing about
+this is that you can do all of the things you would normally do
+to the tree view, except that you are now working with only the
+matching surveys. So you could select the root and color all of
+the surveys which match your search terms red. Or you could get
+information and find out how many shots there are and how long
+they are.</p>
+
+<center>
+<P><IMG SRC="img00013.gif" alt="search results tree view"></p>
+Taco sure surveyed a lot of this system!</p></center>
+
+
+
+
+<A NAME="stationcommentsearch">
+
+<br><br>
+
+<P><h3><font color="#ff0000">9.2 - Station Comment Searches
+</font></h2></p>
+
+
+<P>
+Station Comment Searches take a different approach.
+What they do is look for comments which match your search terms.
+You can choose to see a list of these stations, or you can choose
+to color shots linked to these stations on the survey.</p>
+
+
+<center>
+
+<P><IMG SRC="img00014.gif" alt="search through comments window"></p>
+Searching through survey comments is easy too!</center>
+
+
+<P>
+When you color the shots on the survey, you can choose
+to color the from shot, the to shot, or both. When you set the
+coloring, the system will also place a small ? next to each station
+that matches the query. Double clicking on the question mark will
+show you which station it is. To turn off Station Comment Searches
+press the ESC key or select End Query from the Query menu.</p>
+
+
+
+
+<center><P><IMG SRC="img00015.gif" alt="search results window"></p>
+Your view updates to show the matches as green question marks.
+</center>
+
+
+
+<A NAME="systeminfo">
+<h2><font color="#ff0000">10.0 - Getting Information About the System</font></h2></p>
+
+
+<P>
+As mentioned earlier, when you select a folder or
+survey you can get a summary of what it contains by selecting
+Edit, Properties.</p>
+
+
+
+
+<center><IMG SRC="img00016.gif" alt="folder information window">
+</p>Folder Information Window</center>
+
+<P>
+This information is sensitive to queries. If you
+wanted to find out how much of a system you had surveyed, you
+could set up a query to show you all the surveys you were involved
+with and then get back the information the same way as described
+above.</p>
+
+
+<P>You can also get information about the current view.
+View information is sensitive to loop closures, fixed points on
+the surface, and so forth.</p>
+
+
+View information is available under
+Query, Current View information. To get view information on only
+a portion of the system use the disable feature in the colors
+to turn off those sections of the system you are not interested
+in.</p>
+
+<center>
+<IMG SRC="img00017.gif" alt="information on current view window"></p>
+Information on current window</p>
+</center>
+
+
+<A NAME="surveys">
+<h2><font color="#ff0000">11.0 - Entering Surveys</font></h2></p>
+
+
+<P>
+You can start a new survey by selecting Insert, Survey
+or by pressing the Insert Survey button on the tool bar. When
+you do so, you are brought into the Survey Edit Dialog. Do not
+be afraid. The dialog contains a lot of information but you won't
+need to enter much of it if you don't want to.</p>
+
+
+
+
+<center>
+<IMG SRC="img00018.gif" alt="edit survey leg - summary window"></p>
+The survey editor is powerful and simple to use.
+</center>
+
+
+
+<P>
+The first screen lets you set summary information
+for the survey. This includes a name, default units, and some
+information about the survey type. You must also specify a date
+since <b>On Station</b> has a number of features which use the date to
+provide you with neat information.</p>
+
+
+
+
+<P>
+When you have provided this information, you should
+select the Entries Tab to start entering data.</p>
+
+
+<P>
+<center>
+<IMG SRC="img00019.gif" alt="edit survey leg - entries window">
+</p>
+Editing survey legs is easy</center>
+
+
+
+<P>
+The S/W/L fields indicate Surface, Wall, Length.
+Enter an X, or a Y or any other character in these fields to activate
+them. When activated, the indicate Surface Surveys, Wall Shots,
+and Length Exclusion. Surface surveys are surveys outside of the
+cave (between entrance for example). Wall shots are shots which
+are inside the cave but which are used to define the walls rather
+then to follow a passage. Length exclusion means that the shot
+should not be included in any length calculations.</p>
+
+
+<center><IMG SRC="img00020.gif" alt="column order window"></p>
+Customizing the interface to match your data entry order.</p>
+</center>
+
+<P>
+You can Cut, Copy and Paste within the editor. You
+can also undo unlimited operations by pressing Ctrl+Z, and you
+can automatically number a series of stations by entering the
+first two number and then selecting the Auto Number button on
+the bottom of the page.</p>
+
+
+<P>
+If you entered your data in a different order then
+the fields shown above, you can select the Editor Settings tab
+to set the order in which data will be entered.</p>
+
+
+<A NAME="tips">
+<h2><font color="#ff0000">12.0 - Tips from the experts</font></h2></p>
+Although On Station is very easy to use, there are a lot of hints and tips that can
+make your life much easier.  Here are some of the more useful ones:
+<ul>
+<li>When surveying a cave, try to keep your station names unique.  If every survey numbers the Stations 1,2,3,4...
+then you will have to rename them in On Station, and you will also have a heck of time figuring out where you are
+when you connect to a station numbered 7.  I like to use a hear and a letter, for example
+97A1, 97A2, 97A3.</li>
+<li>In the main 3d view, you can double click on station names to get details about that station.</li>
+<li>Put copious comments into the comment fields.  That way you can search them later to find leads and other information.</li>
+<li>Color schemes and bookmarks let you save important views easily so you don't have to keep trying to find them again.</li>
+<li>Make use of folders for large systems to keep your data organized.</li>
+<li>Use fixed points to put all the caves in an area on the same map, even without surface surveys.  You can turn off the caves you don't want to see by using the
+disabled color.</li>
+</ul>
+
+<center>
+<p><hr width="90%" size="8">
+<h3><A href="index.html">Return to the On Station Home Page</a></h3>
+
+
+<center>
+<p><hr width="90%" size="8">
+
+
+<P><A NAME="differ">This Web Page is maintained by Taco van Ieperen <a href="mail to:tacovan@home.com">tacovan@home.com</a>.</p></A>
+
+
+
+<font size=-2>&copy Taco van Ieperen 1997</font></p></center>
+
+
+
+<BR>
+</blockquote>
+
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

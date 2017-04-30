@@ -1,0 +1,2073 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+IDR_FULLSCREENTOOLBAR   BITMAP                  "toolbar1.bmp"
+IDB_BITMAPGLASS         BITMAP                  "compass.bmp"
+IDB_SPLASH              BITMAP                  "bmp00008.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DISTANCEBETWEENSTATIONS DIALOG 0, 0, 186, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Distance Between Stations"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Starting Station:",IDC_STATIC,7,9,61,8
+    EDITTEXT        IDC_EDIT1,69,7,40,14,ES_AUTOHSCROLL
+    LTEXT           "Ending Station:",IDC_STATIC,7,30,59,8
+    EDITTEXT        IDC_EDIT2,69,27,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Show Distance",IDOK,119,7,60,14
+    PUSHBUTTON      "Cancel",IDCANCEL,119,25,60,14
+END
+
+IDD_DEBUGSTATIONLINKS DIALOG 0, 0, 186, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Debug Station Links"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    EDITTEXT        IDC_EDIT1,62,7,48,14,ES_AUTOHSCROLL
+    LTEXT           "&Station Name:",IDC_STATIC,7,7,46,8
+END
+
+IDD_BLUNDERS DIALOG 0, 0, 275, 165
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Likely Survey Errors"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,208,25,60,14
+    PUSHBUTTON      "Edit Survey...",IDC_BUTTON2,208,7,60,14
+    LTEXT           "Loop closure distributes survey errors around each loop.  This error distribution is weighted in a fashion consistent with the instrument accuracy specified.  More error to less-accurate instruments.  The resulting instrument ""stress"" is shown.",IDC_STATIC,7,132,261,26
+    LISTBOX         IDC_LIST1,7,24,184,103,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Show errors greater then:",IDC_STATIC,7,7,87,10
+    COMBOBOX        IDC_DEVIATIONS,95,7,96,87,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Display",IDC_BLU_DISPLAY,209,40,59,77
+    CONTROL         "Deviatoric",IDC_BLU_DEV,"Button",BS_AUTORADIOBUTTON,214,50,48,10
+    CONTROL         "Maximum",IDC_BLU_MAX,"Button",BS_AUTORADIOBUTTON,214,63,45,10
+    CONTROL         "Compass",IDC_BLU_COM,"Button",BS_AUTORADIOBUTTON,214,76,45,10
+    CONTROL         "Tape",IDC_BLU_TAP,"Button",BS_AUTORADIOBUTTON,214,103,33,10
+    CONTROL         "Clino",IDC_BLU_CLI,"Button",BS_AUTORADIOBUTTON,214,89,31,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_ONSTATTYPE          ICON                    "OnStationDoc.ico"
+IDR_MAINFRAME           ICON                    "idr_onst.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_ADDFOLDER
+    BUTTON      ID_EDIT_ADDSURVEY
+    BUTTON      ID_EDIT_ADDFIXEDPOINT
+    SEPARATOR
+    BUTTON      ID_EDIT_FINDSSURVEY
+    SEPARATOR
+    BUTTON      ID_VIEW_ANIMATE
+    SEPARATOR
+    BUTTON      ID_VIEW_NAMENONE
+    BUTTON      ID_VIEW_NAMEJUNCTIONS
+    BUTTON      ID_VIEW_NAMEALL
+    SEPARATOR
+    BUTTON      ID_VIEW_ZOOMIN
+    BUTTON      ID_VIEW_ZOOMOut
+END
+
+IDR_FULLSCREENTOOLBAR TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_VIEW_FULLSCREEN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Send &Mail...",               ID_FILE_SENDMAIL
+        MENUITEM "&Import...",                  ID_FILE_IMPORT
+        MENUITEM "&Export VRML File...",        ID_FILE_EXPORTVRMLFILE
+        MENUITEM "Export Formatted &Text File...", ID_FILE_EXPORTFORMATTEDTEXT
+        MENUITEM "Export &DXF File...",         ID_FILE_EXPORTDXF
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM "Page &Layout Preferences...", ID_FILE_PRINTINGPREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete",                     ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Selected Item...\tEnter", ID_EDIT_EDIT
+        MENUITEM SEPARATOR
+        MENUITEM "&Bookmark...\tAlt+F2",        ID_EDIT_BOOKMARKS
+        MENUITEM "Pr&operties...\tAlt+Enter",   ID_EDIT_PROPERTIES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Free Form\tF2",              ID_MOVEMENT_FREEFORMVIEW
+        MENUITEM "P&lan\tF3",                   ID_MOVEMENT_PLANVIEW
+        MENUITEM "&Profile\tF4",                ID_MOVEMENT_PROFILEVIEW
+        MENUITEM "&Split Screen\tF5",           ID_MOVEMENT_MIXEDVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Center on Station...",       ID_SEARCH_SHOWSTATION
+        MENUITEM "&Goto Exact View...\tCtrl+G", ID_VIEW_SETEXACTVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen\tCtrl+F",        ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Animate",                    ID_VIEW_ANIMATE
+        MENUITEM "P&references...",             ID_VIEW_PREFERENCES
+    END
+    POPUP "&Insert"
+    BEGIN
+        MENUITEM "&Survey...",                  ID_EDIT_ADDSURVEY
+        MENUITEM "Fixed &Point...",             ID_EDIT_ADDFIXEDPOINT
+        MENUITEM "&Folder...",                  ID_EDIT_ADDFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "&File...",                    ID_INSERT_FILE
+    END
+    POPUP "&Query"
+    BEGIN
+        MENUITEM "&Query Surveys...",           ID_EDIT_FINDSSURVEY
+        MENUITEM "&Search Comments...",         ID_EDIT_SEARCHSTATIONCOMMENTS
+        MENUITEM SEPARATOR
+        MENUITEM "&End Query or Search\tEsc",   ID_EDIT_ENDQUERY
+        MENUITEM SEPARATOR
+        MENUITEM "&Distance Between Stations...", ID_VIEW_DISTANCEBETWEENSTATIONS
+        MENUITEM "&Current View Information...", ID_VIEW_INFORMATION
+    END
+    POPUP "&Drawing"
+    BEGIN
+        MENUITEM "S&urface Topography",         ID_VIEW_SURFACEOVERLAY
+        MENUITEM "Surface Surve&ys",            ID_VIEW_SURFACEANDLOCATIONSURVEYS
+        MENUITEM "&Mark Fixed Points",          ID_OPTIONS_MARKFIXEDPOINTS
+        MENUITEM "Show Reference &Grid",        ID_SHOWREFERENCE_GRID
+        MENUITEM SEPARATOR
+        MENUITEM "Name &All Stations\tCtrl+A",  ID_VIEW_NAMEALL
+        MENUITEM "Name &Junctions Only\tCtrl+J", ID_VIEW_NAMEJUNCTIONS
+        MENUITEM "Name N&one\tCtrl+X",          ID_VIEW_NAMENONE
+        MENUITEM SEPARATOR
+        MENUITEM "Drawing Op&tions...",         ID_VIEW_PASSAGEOPTIONS
+        MENUITEM "Fon&t...",                    ID_DRAWING_FONT
+    END
+    POPUP "&Coloring"
+    BEGIN
+        MENUITEM "Color Scheme &1\tCtrl+1",     ID_DRAWMODE_COLORSCHEME1
+        MENUITEM "Color Scheme &2\tCtrl+2",     ID_DRAWMODE_COLORSCHEME2
+        MENUITEM "Color Scheme &3\tCtrl+3",     ID_DRAWMODE_COLORSCHEME3
+        MENUITEM "Color Scheme &4\tCtrl+4",     ID_DRAWMODE_COLORSCHEME4
+        MENUITEM "Color Scheme &5\tCtrl+5",     ID_DRAWMODE_COLORSCHEME5
+        MENUITEM "Color Scheme &6\tCtrl+6",     ID_DRAWMODE_COLORSCHEME6
+        MENUITEM "Color Scheme &7\tCtrl+7",     ID_DRAWMODE_COLORSCHEME7
+        MENUITEM "Color Scheme &8\tCtrl+8",     ID_DRAWMODE_COLORSCHEME8
+        MENUITEM SEPARATOR
+        MENUITEM "&Depth Coloring",             ID_DRAWMODE_DEPTHCODING
+        MENUITEM "&Age Coloring",               ID_DRAWMODE_AGECOLORING
+        MENUITEM "&Blunder Coloring",           ID_DRAWMODE_BLUNDERCOLOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize Colors...",        ID_EDIT_CONFIGURECOLORS
+    END
+    POPUP "&Errors && Loops"
+    BEGIN
+        MENUITEM "&Show Closure Errors",        ID_OPTIONS_CLOSUREERRORS
+        MENUITEM "&Close Loops",                ID_VIEW_CLOSELOOPS
+        MENUITEM "&List Likely Blunders...",    ID_QUERY_BLUNDERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Orphaned Shots...",          ID_EDIT_ORPHANEDSHOTS
+        MENUITEM SEPARATOR
+        MENUITEM "Loo&p Closure Options...",    ID_ERRORSLOOPS_LOOPCLOSUREOPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Contents",              ID_HELP_CONTENTS
+        MENUITEM SEPARATOR
+        MENUITEM "Tip of the &Day...",          ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About On Station...",        ID_ABOUT_ONSTATION
+    END
+END
+
+IDR_COMPASSMENU MENU
+BEGIN
+    POPUP "Compass"
+    BEGIN
+        MENUITEM "&North",                      ID_NORTH
+        MENUITEM "N&orthEast",                  ID_NORTHEAST
+        MENUITEM "&East",                       ID_EAST
+        MENUITEM "So&uthEast",                  ID_SOUTHEAST
+        MENUITEM "&South",                      ID_SOUTH
+        MENUITEM "Sou&thWest",                  ID_SOUTHWEST
+        MENUITEM "&West",                       ID_WEST
+        MENUITEM "Nort&hWest",                  ID_NORTHWEST
+        MENUITEM SEPARATOR
+        MENUITEM "Tilt &0 (Top View)",          ID_TILT0
+        MENUITEM "Tilt &45 (Top and Side)",     ID_TILT45
+        MENUITEM "Tilt &90 (Side View)",        ID_TILT90
+        MENUITEM "Tilt &135 (Bottom Side)",     ID_TILT135
+        MENUITEM "Tilt 1&80 (Bottom View)",     ID_TILT180
+    END
+END
+
+IDR_RULERMENU MENU
+BEGIN
+    POPUP "Ruler"
+    BEGIN
+        MENUITEM "Zoom 50%",                    ID_RULER_EXPAND50
+        MENUITEM "Shrink 50%",                  ID_RULER_SHRINK50
+        MENUITEM "Maximum Zoom",                ID_RULER_MAXIMUMZOOM
+        MENUITEM "Maximum Shrink",              ID_RULER_MAXIMUMSHRINK
+        MENUITEM SEPARATOR
+        MENUITEM "5m / cm",                     ID_RULER_5MCM
+        MENUITEM "10m / cm",                    ID_RULER_10MCM
+        MENUITEM "25m / cm",                    ID_RULER_25MCM
+        MENUITEM "50m / cm",                    ID_RULER_50MCM
+        MENUITEM "100m / cm",                   ID_RULER_100MCM
+        MENUITEM "500m / cm",                   ID_RULER_500MCM
+        MENUITEM "1000m / cm",                  ID_RULER_1000MCM
+    END
+END
+
+IDR_VIEWPORTMENU MENU
+BEGIN
+    POPUP "Viewport"
+    BEGIN
+        MENUITEM "&Starting Position",          ID_VIEWPORT_STARTINGPOSITION
+        MENUITEM "Set &Exact View...",          ID_VIEWPORT_SETEXACTVIEW
+        MENUITEM "Edit &Bookmarks",             ID_VIEWPORT_EDITBOOKMARKS
+        MENUITEM SEPARATOR
+        POPUP "&Snap to View"
+        BEGIN
+            MENUITEM "&North",                      ID_VIEWPORT_NORTH
+            MENUITEM "&East",                       ID_VIEWPORT_EAST
+            MENUITEM "&South",                      ID_VIEWPORT_SOUTH
+            MENUITEM "&West",                       ID_VIEWPORT_WEST
+        END
+        MENUITEM "Zoom &In 25%",                ID_VIEWPORT_ZOOMIN
+        MENUITEM "Zoom &Out 25%",               ID_VIEWPORT_ZOOMOUT
+        MENUITEM "Rotate &Left",                ID_VIEWPORT_ROTATELEFT
+        MENUITEM "Rotate &Right",               ID_VIEWPORT_ROTATERIGHT
+        MENUITEM "Tilt &Forward",               ID_VIEWPORT_TILTFORWARD
+        MENUITEM "Tilt &Back",                  ID_VIEWPORT_TILTBACK
+    END
+END
+
+IDR_RULERMENUINCHES MENU
+BEGIN
+    POPUP "Ruler"
+    BEGIN
+        MENUITEM "Zoom 50%",                    ID_RULER_EXPAND50
+        MENUITEM "Shrink 50%",                  ID_RULER_SHRINK50
+        MENUITEM "Maximum Zoom",                ID_RULER_MAXIMUMZOOM
+        MENUITEM "Maximum Shrink",              ID_RULER_MAXIMUMSHRINK
+        MENUITEM SEPARATOR
+        MENUITEM "10 ft/inch",                  ID_RULER_10FTINCH
+        MENUITEM "20 ft/inch",                  ID_RULER_20FTINCH
+        MENUITEM "50 ft/inch",                  ID_RULER_50FTINCH
+        MENUITEM "100 ft/inch",                 ID_RULER_100FTINCH
+        MENUITEM "500 ft/inch",                 ID_RULER_500FTINCH
+        MENUITEM "1000 ft/inch",                ID_RULER_1000FTINCH
+        MENUITEM "5000 ft/inch",                ID_RULER_5000FTINCH
+    END
+END
+
+IDR_SURVEYTREEMENU MENU
+BEGIN
+    POPUP "SurveyTree"
+    BEGIN
+        MENUITEM "&Edit...",                    ID_SURVEYTREE_EDITCURRENTITEM
+        MENUITEM "&Delete",                     ID_SURVEYTREE_DELETECURRENTITEM
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert Survey...",           ID_SURVEYTREE_NEWSURVEY
+        MENUITEM "Insert &Folder...",           ID_SURVEYTREE_NEWFOLDER
+        MENUITEM "Insert Fixed &Point...",      ID_SURVEYTREE_NEWFIXEDPOINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_EDIT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Rainbow Color Surveys",      ID_SURVEYTREE_RAINBOWCOLORSURVEYS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "A",            ID_VIEW_NAMEALL,        VIRTKEY, CONTROL
+    "F",            ID_VIEW_FULLSCREEN,     VIRTKEY, CONTROL
+    "G",            ID_VIEW_SETEXACTVIEW,   VIRTKEY, CONTROL
+    "J",            ID_VIEW_NAMEJUNCTIONS,  VIRTKEY, CONTROL
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_ESCAPE,      ID_VIEW_FULLSCREEN_ESCKEY, VIRTKEY 
+    VK_F1,          ID_HELP,                VIRTKEY 
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT
+    VK_F2,          ID_MOVEMENT_FREEFORMVIEW, VIRTKEY 
+    VK_F3,          ID_MOVEMENT_PLANVIEW,   VIRTKEY 
+    VK_F4,          ID_MOVEMENT_PROFILEVIEW, VIRTKEY 
+    VK_F5,          ID_MOVEMENT_MIXEDVIEW,  VIRTKEY 
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,0,1
+ PRODUCTVERSION 3,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Freeware for non-commercial use"
+            VALUE "CompanyName", "Taco van Ieperen"
+            VALUE "FileDescription", "On Station 3.1 Cave Mapping program"
+            VALUE "FileVersion", "3.1.0.1"
+            VALUE "InternalName", "On Station 3.1"
+            VALUE "LegalCopyright", "Copyright © 1994-2000 Taco van Ieperen"
+            VALUE "OriginalFilename", "ONSTATION.EXE"
+            VALUE "ProductName", "On Station Cave Mapping Software"
+            VALUE "ProductVersion", "3.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DISTANCEBETWEENSTATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_DEBUGSTATIONLINKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_BLUNDERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_BLUNDERS DLGINIT
+BEGIN
+    IDC_DEVIATIONS, 0x403, 21, 0
+0x2031, 0x7453, 0x6e61, 0x6164, 0x6472, 0x4420, 0x7665, 0x6169, 0x6974, 
+0x6e6f, "\000" 
+    IDC_DEVIATIONS, 0x403, 13, 0
+0x2032, 0x6544, 0x6976, 0x7461, 0x6f69, 0x736e, "\000" 
+    IDC_DEVIATIONS, 0x403, 13, 0
+0x2033, 0x6544, 0x6976, 0x7461, 0x6f69, 0x736e, "\000" 
+    IDC_DEVIATIONS, 0x403, 13, 0
+0x2034, 0x6544, 0x6976, 0x7461, 0x6f69, 0x736e, "\000" 
+    IDC_DEVIATIONS, 0x403, 13, 0
+0x2035, 0x6544, 0x6976, 0x7461, 0x6f69, 0x736e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_ONSTATTYPE          "\nUntitled\nOn Station Document\nOn Station Files (*.cdi)\n.cdi\nCaveDataInterchange\nOn Station Cave Data Interchange Document"
+    IDR_MAINFRAME           "On Station 3.1\nUntitled\nCave Survey\nCave Surveys (*.cdi)\n.cdi\nCaveDataInterchange\nOn Station Cave Data Interchange Document"
+    IDS_BADWALLFORMAT       "Bad format for passage wall data on line %i.\nLine reads %s"
+    CG_IDS_FILE_ABSENT      "Tips file does not exist in the prescribed directory"
+    CG_IDP_FILE_CORRUPT     "Trouble reading the tips file"
+    IDS_COMMENTS            "Comments"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_CLOCKWISE  "0.0"
+    ID_INDICATOR_TILT       "0.0"
+    ID_INDICATOR_XPAN       "0.0"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_YPAN       "0.0"
+    ID_INDICATOR_ZPAN       "0.0"
+    ID_INDICATOR_SCALE      "0.0"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ONLYDRAGSURVEYSANDFOLDER 
+                            "Dragging and dropping only works for the surveys and folders section.  It will not work within the fixed point list."
+    IDS_INTERNALERRORINLOOPCLOSURE 
+                            "Internal error in loop closure.  On Station was not able to close the system.  Please contact On Station technical support so that this problem can be corrected in future versions."
+    IDS_NOGRIDCONTROL       "The file grid32.ocx is either missing or improperly registered with Windows.  This file is necessary if you wish to edit surveys or surfaces.  It should have been included with your On Station download.  Please try re-installing On Station."
+    IDS_MISSINGCLOSINGPAREN "The expression you entered is missing closing parenthesis.  Please make sure that you have the same number of left and right brackets."
+    IDS_ILLEGALANDOR        "Illegal use of AND or OR in expression."
+    IDS_MISSINGOPENINGPAREN "The expression you entered is missing a set of opening parenthesis.  Please make sure that you use brackets where they are needed."
+    IDS_MISSINGCLOSINGQUOTES "Missing closing quotation marks in expression."
+    IDS_UNABLETOPARSEEXPRESSION 
+                            "On Station was unable to parse the expression you entered.  Please see the online help for examples of how to enter correctly formated strings."
+    IDS_TIEINWASREMOVED     "Node %1 is listed as a Fixed Point.  It is not part of the system.  Double click on this node in the Fixed Point list to fix the problem."
+    IDS_MISSINGDATECONTROL  "The file pdate32.ocx is missing or improperly registered with windows.  On Station will not be able to edit survey dates.  Please try re-installing On Station to correct this problem."
+    IDS_PASTEFAILED         "Unable to paste text from the clipboard.  The text on the clipboard was not in a tabular format."
+    IDS_SEARCH              "Search="
+    IDS_FILEOPENLATERVERSION 
+                            "This file was created by a new version of On Station or some other cave mapping program.  Please check the On Station Web Site for an updated Version of On Station."
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEWPORT_STARTINGPOSITION "Center the system on the screen"
+    ID_SEARCH_SHOWSTATION   "Set a named station as the center of the system"
+    ID_SURVEYTREE_RAINBOWCOLORSURVEYS 
+                            "Color all surveys with alternating colors"
+    ID_VIEW_ANIMATE         "Keep rotating the system automatically\nAuto Rotate"
+    ID_VIEW_DISTANCEBETWEENSTATIONS 
+                            "Shows the distance and bearing between two stations"
+    ID_INSERT_FILE          "Inserts an other file into this one.  Only survey shots are added"
+    IDS_PT_LINE_PLOT        "Line Plot"
+    IDS_PT_HEIGHTS          "Passage Heights"
+    IDS_PT_WIDTHS           "Passage Widths"
+    IDS_PT_FULL_PASSAGES    "Color based on the bluder detection accuracy of the shot"
+    IDS_PT_CROSS_SECTIONS   "Show the shots where there is likely to be an instrument error"
+    IDS_PT_FULL_PASSAGES_SKINNY 
+                            "Select from a variety of different loop closure and error detection techniques"
+    IDS_CDT_IGNORE_DATES    "Ignore Dates"
+    IDS_CDT_BETWEEN         "Between"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CDT_BEFORE          "Before"
+    IDS_CDT_AFTER           "After"
+    IDS_JOBBOOK             "Book"
+    IDS_JOBTAPE             "Tape"
+    IDS_JOBINSTRUMENTS      "Instruments"
+    IDS_JOBRIGGING          "Rigging"
+    IDS_JOBEXPLORATION      "Exploration"
+    IDS_FT_SURVEYDATA       "Survey Data"
+    IDS_FT_RAWCOORDINATES   "Raw Coordinates"
+    ID_SHOWREFERENCE_GRID   "Shows two grids at right angles to help orient the system"
+END
+
+STRINGTABLE
+BEGIN
+    CG_IDS_DIDYOUKNOW       "Did you know..."
+END
+
+STRINGTABLE
+BEGIN
+    CG_IDS_TIPOFTHEDAYHELP  "&Help"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTED        "Edit the item selected in the data view on the left side of the screen"
+    IDS_QUERYRESULTS        "Query Results"
+    IDS_CAVEDIVEFLAGCHANGING 
+                            "You have switched this survey from a standard survey to a cave dive survey, or vice-versa.  Depth readings will be converted directly to clino readings and vice-versa.  This will work in the case where you entered the correct numbers in the wrong survey type.  Do you wish to continue?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CALCULATESYSTEMINTERNALERROR 
+                            "An internal error occurred while trying to calculate the system.  On Station is probably unstable.  You should save your data with a NEW name, and then restart On Station."
+    IDS_ENTERVALIDNUMBER    "Please enter a valid number in the selected cell."
+    IDS_BACKSIGHTLOSS       "Warning: You have asked to remove backsights from this survey.  Any existing backsights will be lost.  Are you sure you want to do this?"
+    IDS_NEEDSURVEYNAME      "You must enter a survey name in order to continue."
+    IDS_INCOMPLETESHOT      "Incomplete survey shot.  You may enter shots of the form\n\nFROM TO LENGTH COMPASS CLINO [UP DOWN LEFT RIGHT]\n\nor\n\nFROM  [UP DOWN LEFT RIGHT]\n."
+    IDS_BACKSIGHTMISMATCH   "Your front and back clinometer disagree by more then 10 degrees.  Please check these numbers to make sure that they are correct."
+    IDS_COMPASSMISMATCH     "Your front and back compass readings disagree by more then 20 degrees.  Please check these readings to ensure that they are correct."
+    IDS_COMPASSRANGE        "Compass readings should be between -360 and 360 degrees.  If you are using European instruments you can go to the summary tab and set compass readings to be between -400 and 400 degrees."
+    IDS_BADSTATIONNAME      "Please enter a new name for the selected station.  The station name should not contain any spaces because this makes it difficult for some programs to read it in."
+    IDS_COMPASSRANGEEURO    "Compass readings should be between -400 and 400 degrees.  If you are using 360 degree compasses you can change the instrument style in the Summary Tab."
+    IDS_CLINORANGE          "Clinometer readings should be between -90 and 90 degrees.  If you are using 100 degree clinometers you can change the instrument type in the Summary Tab."
+    IDS_CLINORANGEEURO      "Clinometer readings should be between -100 and 100 degrees.  If you are using 90 degree clinometers you can change the instrument type in the Summary Tab."
+    IDS_BADSTARTTOFILE      "The first two lines of this file should contain a FILEVERSION and a PROGRAM identifier.  The file apprears to be corrupt and will not be loaded.  Try using File Import."
+    IDS_ORPHANEDLISTINVALID "The orphaned shot list here is no longer valid now that you have edited a survey.  This dialog must be closed.  Simply bring this dialog back up again to see a new orphaned shot list."
+    IDS_METERLIMIT          "Please enter a number of meters between 1.0 and 5000.0 for the scale."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FEETLIMIT           "Please enter a number of feet between 10.0 and 20000.0 for the scale."
+    IDS_CANTFINDFIXEDPOINT  "Unable to locate station.  A fixed point must refer to a survey station which exists in the current system."
+    IDS_INVALIDSTATIONNAME  "The station name you provided is not valid.  The center position was not changed."
+    IDS_NOSURVEYORFOLDERSELECTED 
+                            "No survey or folder selected.  Please select a survey from the list of available surveys."
+    IDS_BLUNDERLISTINVALID  "The blunder shot list here is no longer valid now that you have edited a survey.  This dialog must be closed.  Simply bring this dialog back up again to see a new blunder shot list."
+    IDS_GENERALMEMORYERROR  "Unable to complete operation.  On Station may be low on memory or resources.  Save all your work.  Try closing a few applications and then trying the operation again."
+    IDS_NOFORMATONCLIPBOARD "On Station could not recognize that data that was on the clipboard.  It was either not generated by On Station or was generated by an incompatible older version."
+    IDS_OLDFORMATUSETRANSLATOR 
+                            "This file was created by an older version of On Station and cannot be read by this version.  On Station now supports CDI (Cave Data Interchange) which will let you exchange your data easily with people using other programs.  The File Import option can update your data files so that they can be read correctly by this program."
+    IDS_BADLINEFORMAT       "Line %i of the input file is not properly formatted.  The line reads\n\n%s\n\n.  It should follow the form TOKEN=VALUE."
+    IDS_ENDOFFILEERROR      "An unexpected end of file was encountered.  The file could not be read correctly."
+    IDS_DELETEWARNING       "Deleting folder %1 will also delete everything this folder contains.  Are you sure you want to do this?"
+    IDS_EURODEGREESCHANGED  "You have switched between gradians and degrees.  On Station will keep the angles logically the same.  This means an angle of 90 degrees will show up as 100 or vice versa.  If this is not what you intended, you should copy all of your shots to the clipboard and then paste them back after setting the new units.  Do you wish to change the units now?"
+    IDS_FULLSCREEN          "Full"
+    IDS_DUPLICATEFIXEDPOINT "You already have a fixed point at this station.  You cannot specify more then one location for the same station."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DISABLEDLEGSCREWTHISUP 
+                            "You have disabled some of the surveys in your system.  This will  make Orphaned shot detection behave extremely eratically because these legs will show up as orphans.  You should probably set a color for all survey legs before you continue."
+    IDS_HELPTHROUGHBROWSER  "On Station 3.1 provides HTML help.  You must have a Web Browser such as Netscape Navigator or Internet explorer on your system to see the help file."
+    IDS_SELECTFILLAREA      "To automatically fill in station names please select the area you want to fill including a valid first row from which a pattern can be established."
+    IDS_FILLNEEDSFROMANDTO  "In order to fill in the Station names in an area the top line should contain the From and To Station names to start with."
+    IDS_BADFILLPATTERN      "The from and to station do not form a recognizable pattern.  On Station can only auto-name stations if the sample stations are of the from <BaseName><number>, <BaseName><number+1>. "
+    IDS_UNABLETODUMPFORMATTEDTEXT 
+                            "On Station was unable to open the file for writing.  Please make sure that you have sufficient disk space and that you have write permission to the file you selected."
+    IDS_SAVEFORMATTEDTEXTFAILEDUNKNOWN 
+                            "On Station encountered an error while trying to save the formatted text to a file.  Please check that you have sufficient disk space and memory."
+    IDS_HIDE                "Hide"
+    IDS_DISABLE             "Disable"
+    IDS_COLORSCHEMENAME     "Color Scheme %i"
+    IDS_FIXEDPOINTROOTNAME  "Fixed Points"
+    IDS_INCOMPLETESHOTDEPTH "Incomplete survey shot.  You may enter shots of the type\n\nFROM,DEPTH\n\nor\n\nFROM TO LENGTH COMPASS DEPTH."
+    IDS_FROMSTATION         "From Station"
+    IDS_TOSTATION           "To Station"
+    IDS_COMPASS             "Compass"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COMPASSBACK         "Compass Backsight"
+    IDS_CLINOMETER          "Clinometer"
+    IDS_CLINOMETERBACK      "Clinometer Backsight"
+    IDS_LENGTH              "Length"
+    IDS_UP                  "Up"
+    IDS_DOWN                "Down"
+    IDS_LEFT                "Left"
+    IDS_RIGHT               "Right"
+    IDS_DEPTH               "Depth"
+    IDS_SURFACEPROPERTYSHEETTITLE "Edit Surface Data"
+    IDS_SURFACEFOLDERTITLE  "Surface Data"
+    IDS_SURVEYEDITSHEETTITLE "Edit Survey Leg"
+    IDS_COLORSCHEMEHOTKEY   "%s\tCtrl+%i"
+    IDS_ORPHANFORMAT        "Shot=%s\tSurvey=%s"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CLINOTAG            "Clinometer:"
+    IDS_FOLDERTOTALS        "\nGrand Totals for Folder %s"
+    IDS_SURVEYTOTALS        "\nGrand Totals for Survey %s"
+    IDS_CONTAINSNOSHOTS     "Contains no shots\n"
+    IDS_SUMMARYHEADER       "Shots:\tSurface: %i\tCave: %i\n"
+    IDS_LENGTHTOTAL         "Length is:\tSurface: %s\tCave: %s\n"
+    IDS_UNTITLED            "Untitled"
+    IDS_DEPTHTAG            "Depth Gauge:"
+    IDS_ABOUTONSTATION      "About On Station 3.1"
+    IDS_FREEFORM            "Free Form"
+    IDS_PROFILE             "Profile"
+    IDS_MIXED               "Split Screen"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PLAN                "Plan"
+    IDS_STARTDEPTHM         "Start Depth (m)"
+    IDS_INTERVALM           "Interval (m)"
+    IDS_STARTDEPTHFT        "Start Depth (ft)"
+    IDS_INTERVALFT          "Interval (ft)"
+    IDS_STANDARD            "Standard"
+    IDS_SURVEYROOT          "Surveys"
+    IDS_NORTH               "North"
+    IDS_CONFIGURECOLORS     "Configure Colors"
+    IDS_VALUELIMITSFT       "(Value should be between 3ft/in and 20000 ft/in)"
+    IDS_SIZEFTIN            "Size: (ft/in)"
+    IDS_MIXEDDIVEERROR      "The survey ending at line %i mixes Dive Shots and Regular Shots.  On Station cannot currently support this.  You will have to go in and clean up this data by hand if you want to import it.  Contact On Station Technical Support if you need help."
+    IDS_BEFORE              "before %s"
+    IDS_ANDLATER            "%s and later"
+    IDS_STOS                "%s to %s"
+    IDS_NAMETABDEPTH        "%s\tDepth=%s"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_XPOS                "East %s"
+    IDS_YPOS                "North %s"
+    IDS_ZPOS                "Depth %s"
+    IDS_SURVEYNAME          "Survey Name="
+    IDS_PERSONNEL           "People="
+    IDS_DESCRIPTION         "Description"
+    IDS_QUERYAND            " AND "
+    IDS_QUERYOR             " OR "
+    IDS_STATIONS            "Stations"
+    IDS_DATE                "Date"
+    IDS_TILTSPINZOOM        "Tilt=%.1f  Spin=%.1f   %s"
+    IDS_XYZ                 "X=%.1f Y=%.1f Z=%.1f"
+    IDS_2FKM                "%.2f KM"
+    IDS_1FM                 "%.1f m"
+    IDS_2FMILES             "%.2f Miles"
+    IDS_1FFT                "%.1f ft"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_2FMCM               "%.2f m/cm"
+    IDS_2FFTINCH            "%.2f ft/inch"
+    IDS_X                   "X=%s"
+    IDS_Y                   "Y=%s"
+    IDS_Z                   "Z=%s"
+    IDS_TILT                "Tilt=%.1f"
+    IDS_SPIN                "Spin=%.1f"
+    IDS_SAVEFSURVEY         "Survey:  %s\n"
+    IDS_SAVEFSYSTEM         "System:  %s\n"
+    IDS_SAVEFDESCRIPTION    "Description: %s\n"
+    IDS_SAVEFDATE           "Date: %s\n"
+    IDS_SAVEFTECHNICAL      "\nTechnical Information\n"
+    IDS_SAVEFMETERS         "All distances are in meters\n"
+    IDS_SAVEFFEET           "All distances are in feet\n"
+    IDS_SAVEFDECLINATION    "Declination: %s\n"
+    IDS_SAVEFNAMEDUTY       "Name: %s\nDuty: %s\n"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_IMPORT          "Import a datafile from an other cave mapping program."
+    ID_EDIT_CONFIGURECOLORS "Customize the depth and age coloring for the current document"
+    ID_VIEW_SURFACEOVERLAY  "Turn surface topography on and off"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPTIONS_MARKFIXEDPOINTS 
+                            "Mark fixed points in the system with a special symbol\nMark Fixed Points"
+    ID_FILE_SENDMAIL        "Sends the current cave to somebody as an email attachment"
+    ID_VIEW_ZOOMIN          "Zoom In\nZoom In"
+    ID_VIEW_ZOOMOut         "Zoom Out\nZoom Out"
+    ID_OPTIONS_CLOSUREERRORS 
+                            "Show loop closure errors as dashed line segments"
+    ID_FILE_EXPORTVRMLFILE  "Save the currently active view as a VRML file for 3d viewing on the World Wide Web"
+    ID_EDIT_SEARCHSTATIONCOMMENTS 
+                            "Show all shots whose comments match defineable search criterion\nSearch Station Comments"
+    ID_EDIT_FINDSSURVEY     "Show only the surveys which match certain conditions\nQuery Surveys"
+    ID_FILE_EXPORTFORMATTEDTEXT 
+                            "Save selected surveys and folders as a text file for printing and proofing"
+END
+
+STRINGTABLE
+BEGIN
+    ID_HELP_TIPOFTHEDAY     "Show the Tip of the Day screen"
+    ID_EDIT_ORPHANEDSHOTS   "Show shots which are not connected to anything in the system"
+    ID_HELP_CONTENTS        "Show the table of contents"
+    ID_VIEW_PREFERENCES     "Configure preferences for the current view\nPreferences"
+    ID_ABOUT_ONSTATION      "Give information on copyright and getting source code for On Station"
+    ID_VIEW_INFORMATION     "Show information on the current view such as total length and deepest point"
+    ID_EDIT_BOOKMARKS       "Add or edit bookmarks to allow you to quickly navigate between key views\nBookmark"
+    ID_FILE_PRINTINGPREFERENCES 
+                            "Configure how On Station will present information on a page"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_ADDFIXEDPOINT   "Add a new fixed point to the current document\nAdd New Fixed Point"
+    ID_EDIT_DELETE          "Delete the selected folder, survey, or fixed point"
+    ID_EDIT_ADDFOLDER       "Add a new folder to the current document\nAdd New Folder"
+    ID_SURVEYTREE_NEWFIXEDPOINT "Insert a new fixed point into the system"
+    ID_EDIT_EDIT            "Edit the selected folder, survey, or fixed point\nEdit Selected"
+    ID_VIEW_FULLSCREEN      "Toggle between full screen and windowed mode\nFull Screen"
+    ID_EDIT_PROPERTIES      "Shows properties for the current survey, folder, or fixed point."
+    ID_EDIT_ENDQUERY        "Ends special display for the last query or search\nEnd Query"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SURVEYTREE_NEWSURVEY "Insert a new survey into the system"
+    ID_SURVEYTREE_NEWFOLDER "Insert a new survey folder into the system"
+    ID_SURVEYTREE_EDITCURRENTITEM "Edit the currently selected item"
+    ID_SURVEYTREE_DELETECURRENTITEM 
+                            "Delete the currently selected item or its contents"
+    ID_EDIT_ADDSURVEY       "Add a new survey to the current document\nAdd New Survey"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MOVEMENT_PLANVIEW    "Allow the system to be viewed only from above\nView Plan"
+    ID_MOVEMENT_PROFILEVIEW "Allow the system to be viewed only from the side\nView Profile"
+    ID_MOVEMENT_MIXEDVIEW   "View the system from above and from the side simultaneously\nView Split Screen"
+    ID_MOVEMENT_FREEFORMVIEW 
+                            "All the system to be viewed from any angle\nView Free Form"
+    ID_VIEW_PASSAGEOPTIONS  "Configure how object will be drawn in the current view"
+    IDS_COLORSCHEMEBLUNDER  "Blunder"
+END
+
+STRINGTABLE
+BEGIN
+    ID_DRAWMODE_DEPTHCODING "Color the system based on the depth of the survey below the surface\nDepth Coloring"
+    ID_DRAWMODE_PERSPECTIVE "Turn perspective mode on and off\nPerspective"
+    ID_VIEW_SETEXACTVIEW    "Set an exact scale and rotation for the current view\nGoto Exact View"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_SURFACEANDLOCATIONSURVEYS 
+                            "Turn surface surveys on and off\nSurface Surveys"
+    ID_VIEW_NAMEALL         "Show the names for all stations\nName All Stations"
+    ID_VIEW_NAMEJUNCTIONS   "Show the names only for stations which are at important junctions\nName Junctions Only"
+    ID_VIEW_NAMENONE        "Don't show the names for any stations\nName None"
+    ID_DRAWMODE_AGECOLORING "Color the system based on the date that a survey was completed\nAge Coloring"
+    ID_VIEW_CLOSELOOPS      "Turn loop closures (error averaging) on and off"
+END
+
+STRINGTABLE
+BEGIN
+    ID_DRAWMODE_COLORSCHEME1 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME2 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME3 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME4 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME5 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME6 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME7 "Switch color schemes"
+    ID_DRAWMODE_COLORSCHEME8 "Switch color schemes"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SAVEFDIVEHEADING    "From\tTo\tLength\tComp\tDepth\tUp\tDown\tLeft\tRight\n"
+    IDS_SAVEFLEGHEADING     "From\tTo\tLength\tComp\tClino\tUp\tDown\tLeft\tRight\n"
+    IDS_SAVEFTOTALS         "\nLeg Totals for leg %s\n"
+    IDS_SAVEFNOSHOTS        "Contains no shots\n"
+    IDS_SAVEFTOTALS2        "%i Surface Shots\n%i Cave Shots\n"
+    IDS_SAVEFTOTALS3        "Surface Length is %s\nCave Length is %s\n"
+    IDS_RESETALLSURFACEDATA "Continuing this operation will remove all surface data including altitudes and surface size.  Are you sure you want to remove all surface data from the system?"
+    IDS_REMOVEALLFIXEDPOINTS 
+                            "Continuing this operation will remove all fixed points from the system.  Are you sure that you wish to do this?"
+    IDS_COLORSCHEMEAGE      "Age Coloring"
+    IDS_COLORSCHEMEDEPTH    "Depth Coloring"
+    IDS_SURFACECHANGEDSUGGESTPASTE 
+                            "You are changing the surface data for your cave system.  Any existing data will be erased.  If you want to preserve existing data, you should copy the data to the clipboard and then paste it in after making this change.  Press YES to continue and lose your data, press NO to think about it."
+    IDS_NO_IMPORT_EXE       "On Station could not find the program which is used to do file imports.  Please make sure that the program importapp.exe is in your path.  If you do not have this file, you should download it from the On Station Web Page.  The About Box contains connection information."
+    IDS_NOBROWSER           "On Station could not find a Web Browser on your system.  Please connect to the Web Site manually at http://members.home.net/tacovan"
+    IDS_NOMATCHONSEARCH     "There were no stations matching your search criterion."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BETWEEN             "Between"
+    IDS_BEFORE2             "Before"
+    IDS_AFTER               "After"
+    IDS_ENTERVALIDSTATIONNAME "Please enter a valid station name."
+    IDS_DISTANCERESULT      "To get from station %s to %s travel:\n\n%.1f m %s ,%.1f m %s, and %.1f m %s\n\n%.1f m horizontally at clinometer %.1f and compass %.1f.\n\nThe total distance between the stations is %.1f m.  "
+    IDS_SOUTH               "South"
+    IDS_EAST                "East"
+    IDS_WEST                "West"
+    IDS_LOCATION            "%s\t%f\t%f\t%f"
+    IDS_QUERYNOMATCHES      "There are no survey legs which match the current query.  The query has been ignored."
+    IDS_UNEXPECTEDTOKEN     "On Station encountered an unexpected token on line %i of the file.\n\nExpecting %s=...\nGot %s=%s."
+    IDS_UNEXPECTEDTOKENBEGIN 
+                            "On Station encountered an unexpected token on line %i of the file.\n\nExpecting Begin=%s...\nGot %s."
+    IDS_MISMATCHEDEND       "On Station encountered an error reading the input file.  Line %i read %s=%s, but there is no start to this block."
+    IDS_WRONGEND            "On Station encountered a problem with this file.  The block starting with\n\n%s=%s\n\nwas ended with\n\n%s=%s."
+    IDS_LINETOOLONG         "The line at or near line %i was more then 4000 characters long.  On Station cannot handle lines of this size.  Please contact On Station technical support and report this problem."
+    IDS_BADSHOTFORMAT       "On Station could not read the survey shot at line %i.  The bad line reads\n\n%s"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "On Station 3.1"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BADFORMATSTRING     "The survey shot at line %i has a bad format string.  Unable to process file."
+    IDS_UNABLETOOPENFILE    "On Station was unable to read the specified file.  If you have continued problems please contact On Station technical support."
+    IDS_UNEXPECTEDTOKENEND  "On Station encountered an unexpected token on line %i of the file.\n\nExpecting End=%s...\nGot %s."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""OnStation.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#include ""afxprint.rc""    // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMFOLDERS           BITMAP                  "BITMAP1.BMP"
+IDB_BMSURVEYS           BITMAP                  "BMFOLDER.BMP"
+IDB_TITLEIMAGE          BITMAP                  "TITLEIMA.BMP"
+IDB_LIGHTBULB           BITMAP                  "litebulb.bmp"
+IDB_BITMAPPIN           BITMAP                  "bitmappi.bmp"
+IDB_BITMAPPINROOT       BITMAP                  "bmp00002.bmp"
+IDB_SURFACEFOLDERROOT   BITMAP                  "bmp00003.bmp"
+IDB_SURFACEFOLDER       BITMAP                  "bmp00004.bmp"
+IDB_BITMAPPINONSCREEN   BITMAP                  "bmp00001.bmp"
+IDB_BITMAPSEARCHFOUND   BITMAP                  "bmp00005.bmp"
+IDB_QUESTIONBRUSH       BITMAP                  "bmp00006.bmp"
+IDB_BITMAPPINSEARCH     BITMAP                  "bmp00007.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 34, 22, 269, 215
+STYLE DS_SETFONT | WS_POPUP | WS_DISABLED | WS_CAPTION
+CAPTION "Copyright"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "On Station 3.1",IDC_STATICTITLE,79,11,130,15
+    CTEXT           "Copyright (c)  1995-2000\nTaco van Ieperen",IDC_STATICAUTHOR,80,30,130,22
+    CTEXT           "This program is distributed as Free-Ware.  There are no restrictions on its use.",IDC_STATIC,5,66,261,29
+    CTEXT           "Source code for On Station is freely available.  Anyone wishing to use this as a starting point for other projects is encouraged to do so.",IDC_STATIC,5,106,262,27
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,7,7,71,54
+END
+
+IDD_AGECOLORS DIALOG 0, 0, 270, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Age Colors"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Age Increment:",IDC_STATIC,7,7,170,10
+    LISTBOX         IDC_AGELIST,5,18,180,110,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Coloring:",IDC_STATIC,196,6,70,8
+    LTEXT           "Slot",IDC_COLORSLOT,196,20,56,36
+    PUSHBUTTON      "Defaults",IDC_BUTTONDEFAULTS,196,127,67,14
+    PUSHBUTTON      "Set Increments...",IDC_WIZARD,196,107,67,14
+    LTEXT           "These settings apply to ALL colors schemes.",IDC_STATIC,6,131,174,8
+END
+
+IDD_DEPTHCOLORS DIALOG 0, 0, 270, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Depth Colors"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_NEWCOLORSLOT,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,196,20,48,48
+    LTEXT           "Highest:",IDC_STATIC,6,15,38,9
+    LTEXT           "High:",IDC_STATIC,6,40,39,9
+    LTEXT           "Mid Level:",IDC_STATIC,6,65,43,9
+    LTEXT           "Deep:",IDC_STATIC,6,91,42,10
+    LTEXT           "Deepest:",IDC_STATIC,6,117,39,9
+    CONTROL         "",IDC_DEPTHDRAW,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,52,13,114,115
+    LTEXT           "Coloring",IDC_STATIC,196,6,51,8
+    PUSHBUTTON      "Defaults",IDC_BUTTONDEFAULTS,196,127,67,14
+    PUSHBUTTON      "Customize...",IDC_WIZARD,196,89,67,14
+    PUSHBUTTON      "Split Evenly...",IDC_EVENSPLIT,196,108,67,14
+    LTEXT           "These settings apply to all color schemes.",IDC_STATIC,38,131,140,8
+END
+
+IDD_EDITSETTINGSPAGE DIALOG 0, 0, 340, 230
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Editor Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Column Order",IDC_STATIC,13,12,190,168
+    LISTBOX         IDC_LISTCOLUMNS,23,29,106,95,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Defaults",IDC_DEFAULTS,142,31,50,14
+    PUSHBUTTON      "Move Down",IDC_MOVEDOWN,142,57,50,14
+    PUSHBUTTON      "Move Up",IDC_MOVEUP,141,78,50,14
+    LTEXT           "Click on the field you want to reorder and then press Move Down or Move Up to change its position in the list box.",IDC_STATIC,27,133,162,35
+END
+
+IDD_FOLDERINFO DIALOG 0, 0, 245, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Folder Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,183,7,50,14
+    LTEXT           "Name",IDC_FOLDERNAME,7,6,162,20
+    GROUPBOX        "Underground Survey Information",IDC_STATIC,6,77,227,37
+    GROUPBOX        "Surface Surface Information",IDC_STATIC,5,120,228,44
+    LTEXT           "Total Number of Underground Shots",IDC_STATIC,13,89,118,8
+    LTEXT           "Static",IDC_NUMSHOTS,176,89,46,8
+    LTEXT           "Static",IDC_TOTALLENGTH,176,102,46,8
+    LTEXT           "Total Length of Underground Portion of System",IDC_STATIC,13,102,155,8
+    LTEXT           "Total Number of Surface Shots",IDC_STATIC,12,134,101,8
+    LTEXT           "Total Length of Surface Portion of System",IDC_STATIC,12,146,157,8
+    LTEXT           "Static",IDC_NUMSURFACESHOTS,175,133,46,8
+    LTEXT           "Static",IDC_TOTALSURFACELENGTH,175,146,46,8
+    LTEXT           "NOTE:  This information totals all shots regardless of wether they are actually drawn as part of your current view.  Accurate information for a particular View including depth information is under Information in the View menu.",IDC_STATIC,5,168,228,33
+    LTEXT           "Total Number of Surveys",IDC_STATIC,15,43,79,8
+    LTEXT           "Static",IDC_TOTALALLSURVEYS,172,43,19,8
+    LTEXT           "Total Shots",IDC_STATIC,15,55,147,8
+    LTEXT           "Static",IDC_TOTALNOTEXCLUDED,171,56,19,8
+    GROUPBOX        "General Summary",IDC_STATIC,6,30,227,44
+END
+
+IDD_GRIDPAGE DIALOGEX 0, 0, 350, 230
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Entries"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_GRID1,"MFCGridCtrl",WS_TABSTOP,6,7,338,198
+    PUSHBUTTON      "Cut (Ctrl+X)",IDC_CUT,5,209,48,14
+    PUSHBUTTON      "Copy (Ctrl+C)",IDC_COPY,55,209,48,14
+    PUSHBUTTON      "Paste (Ctrl+V)",IDC_PASTE,105,209,48,14
+    PUSHBUTTON      "Auto Number",IDC_AUTONUMBER,255,209,48,14
+    PUSHBUTTON      "Undo (Ctrl+Z)",IDC_UNDO,155,209,48,14
+    PUSHBUTTON      "Insert Row",IDC_INSERTLINE,205,209,48,14
+    PUSHBUTTON      "Auto Size",IDC_AUTOSIZE,305,209,39,14
+END
+
+IDD_INSTRUMENTPAGE DIALOG 0, 0, 350, 230
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Instruments"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Instrument Names and Corrections",IDC_STATIC,7,10,208,120
+    LTEXT           "Name:",IDC_STATIC,80,30,64,11
+    LTEXT           "Correction:",IDC_STATIC,150,30,54,9
+    LTEXT           "Tape:",IDC_STATIC,15,44,57,8
+    EDITTEXT        IDC_TAPENAME,79,44,66,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TAPEFIX,150,44,55,12,ES_AUTOHSCROLL
+    LTEXT           "Compass 1:",IDC_STATIC,15,58,62,9
+    EDITTEXT        IDC_COMPASS1NAME,79,58,66,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMPASS1FIX,150,58,55,12,ES_AUTOHSCROLL
+    LTEXT           "Clinometer 1:",IDC_CLINO1TEXT,15,73,62,10
+    EDITTEXT        IDC_CLINO1NAME,79,72,66,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CLINO1FIX,150,72,55,12,ES_AUTOHSCROLL
+    LTEXT           "Compass 2:",IDC_COMPASS2TEXT,15,89,63,9
+    EDITTEXT        IDC_COMPASS2NAME,79,87,66,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMPASS2FIX,150,87,55,12,ES_AUTOHSCROLL
+    LTEXT           "Clinometer 2:",IDC_CLINO2TEXT,15,103,60,10
+    EDITTEXT        IDC_CLINO2NAME,79,101,66,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CLINO2FIX,150,101,55,12,ES_AUTOHSCROLL
+    GROUPBOX        "Standard Instrument Errors",IDC_STATIC,222,10,117,75
+    LTEXT           "Tape:",IDC_STATIC,233,30,30,11
+    EDITTEXT        IDC_TAPE_STD_ERROR,271,28,55,12,ES_AUTOHSCROLL
+    LTEXT           "Compass:",IDC_STATIC,233,45,32,10
+    EDITTEXT        IDC_COMPASS_STD_ERROR,271,44,55,12,ES_AUTOHSCROLL
+    LTEXT           "Clinometer:",IDC_CLINO1TEXTA,233,62,37,9
+    EDITTEXT        IDC_CLINO_STD_ERROR,271,60,55,12,ES_AUTOHSCROLL
+    LTEXT           "Declination:",IDC_STATIC,223,99,57,9
+    EDITTEXT        IDC_DECLINATION,283,98,40,12,ES_AUTOHSCROLL
+    GROUPBOX        "Directions:",IDC_STATIC,8,137,331,69
+    LTEXT           "Corrections specified will be ADDED to a reading before calculations.  This allows you to compensate for a compass that is off by 2 degrees, or a tape which has been cut short.",IDC_STATIC,25,153,304,20
+    LTEXT           "Standard instrument errors indicate the accuracy of measurements.  The error gives the program guidelines as to how much readings should be corrected during loop closures.",IDC_STATIC,24,179,296,19
+    LTEXT           "(Declination is Added to compass readings)",IDC_STATIC,227,113,107,17
+END
+
+IDD_NEWFOLDER DIALOG 0, 0, 185, 41
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Folder"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,5,9,41,11
+    EDITTEXT        IDC_EDIT1,49,7,74,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,23,50,14
+END
+
+IDD_PAGELAYOUT DIALOG 0, 0, 225, 161
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Page Layout Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Page Decorations",IDC_STATIC,7,10,147,82
+    CONTROL         "Scale Bar",IDC_CHECKINCLUDESCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,22,114,10
+    CONTROL         "North Arrow",IDC_CHECKINCLUDENORTHARROW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,34,97,10
+    CONTROL         "Thick Lines",IDC_CHECK_THICKLINES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,46,131,10
+    LTEXT           "Overlap Pages (mm):",IDC_STATIC,13,72,89,8
+    COMBOBOX        IDC_COMBOOVERLAP,106,70,43,72,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,165,14,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,165,30,50,14
+    CONTROL         "Side Scale Markings",IDC_CHECKSIDESCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,59,132,10
+    GROUPBOX        "",IDC_STATIC,8,94,147,62,NOT WS_VISIBLE
+    PUSHBUTTON      "Edit Text...",IDC_BUTTON1,73,138,79,14,NOT WS_VISIBLE
+    CONTROL         "List People by Year",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,21,109,120,10
+    CONTROL         "Show Title Box",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,11,94,123,10
+END
+
+IDD_PEOPLEPAGE DIALOG 0, 0, 350, 230
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Personel"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,28,18,83,9
+    LTEXT           "Job:",IDC_STATIC,160,18,58,9
+    EDITTEXT        IDC_NAME1,27,30,125,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_JOB1,158,30,74,42,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NAME2,27,45,125,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_JOB2,158,45,74,43,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NAME3,27,60,125,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_JOB3,158,60,74,41,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NAME4,27,75,125,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_JOB4,158,75,74,42,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NAME5,27,90,125,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_JOB5,158,89,74,48,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NAME6,27,105,125,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_JOB6,158,105,74,46,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SAVEFORMATTEDTEXTFILE DIALOG 0, 0, 249, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Save Formatted Text File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Survey Name:",IDC_STATIC,5,22,92,11
+    DEFPUSHBUTTON   "Save",IDOK,183,17,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,183,36,51,14
+    CONTROL         "Generic1",IDC_SURVEYLIST,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | WS_BORDER | WS_TABSTOP,6,34,170,102
+    LTEXT           "Save Format:",IDC_STATIC,6,8,59,8
+    COMBOBOX        IDC_COMBO1,70,7,97,38,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SEARCHRESULT DIALOG 0, 0, 286, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Matching Survey Stations"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "List of matching Stations:",IDC_STATIC,5,5,143,9
+    LISTBOX         IDC_STATIONLIST,5,15,186,99,LBS_OWNERDRAWFIXED | LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,203,15,66,14
+    PUSHBUTTON      "Show Surveys",IDSHOWSURVEYS,203,41,66,14
+    PUSHBUTTON      "Fix this Point...",IDC_FIXTHISPOINT,203,60,66,14
+    PUSHBUTTON      "Center",IDC_BUTTONCENTER,203,81,66,14
+    LTEXT           "Z",IDC_STATIC_Z,15,154,134,10
+    GROUPBOX        "Position Information for Station",IDC_STATIC,6,118,186,55
+    LTEXT           "X",IDC_STATIC_X,15,131,123,10
+    LTEXT           "Y",IDC_STATIC_Y,15,143,124,10
+END
+
+IDD_SUMMARYPAGE DIALOG 0, 0, 340, 230
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Summary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_TDS1,14,20,43,8
+    EDITTEXT        IDC_SURVEYNAME,59,20,191,13,ES_AUTOHSCROLL
+    LTEXT           "Survey Date:",IDC_TDS4,14,40,42,8
+    CONTROL         "",IDC_DATEEDIT1,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,59,38,78,13
+    GROUPBOX        "Comments:",IDC_TDF4,9,64,250,61
+    EDITTEXT        IDC_COMMENTS,14,77,234,39,ES_MULTILINE | ES_AUTOVSCROLL
+    GROUPBOX        "Survey Options",IDC_TDF3,9,129,251,81
+    CONTROL         "Use Meters for Lengths",IDC_CHECKMETRIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,142,232,10
+    CONTROL         "Measure Angles in Gradians (100 grads=right angle)",IDC_EURODEGREESCHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,156,237,10
+    CONTROL         "Cave Dive",IDC_CAVEDIVECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,170,106,10
+    CONTROL         "Backsights",IDC_CHECKBACKSIGHTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,183,235,10
+    GROUPBOX        "Survey Overview",IDC_TDF1,9,5,250,55
+    CONTROL         "Use Meters for Dive Depths",IDC_DIVEMETERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,170,115,10
+END
+
+IDD_SURFACEALTITUDES DIALOG 0, 0, 275, 200
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Altitudes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SURFACEALTITUDEGRID,"MFCGridCtrl",WS_TABSTOP,12,20,255,173
+    LTEXT           "&Altitude at Grid Locations:",IDC_STATIC,12,8,179,8
+END
+
+IDD_SURFACESIZEPAGE DIALOG 0, 0, 275, 200
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Size"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Cell Size: (m)",IDC_STATIC,14,11,87,8
+    EDITTEXT        IDC_SURFACECELLSIZE,108,10,34,13,ES_AUTOHSCROLL
+    RTEXT           "Grid North:",IDC_STATIC,147,11,67,11
+    EDITTEXT        IDC_GRIDNORTH,216,10,41,13,ES_AUTOHSCROLL
+    LTEXT           "South Side (m or UTM):",IDC_STATIC,20,49,87,8
+    EDITTEXT        IDC_BOTTOM,109,48,45,12,ES_AUTOHSCROLL
+    LTEXT           "West Side (m or UTM):",IDC_STATIC,20,63,88,8
+    EDITTEXT        IDC_LEFT,109,62,45,12,ES_AUTOHSCROLL
+    LTEXT           "Height (Cells):",IDC_STATIC,20,78,75,8
+    EDITTEXT        IDC_GRIDHEIGHT,109,77,45,14,ES_AUTOHSCROLL
+    LTEXT           "Width (Cells):",IDC_STATIC,20,93,74,9
+    EDITTEXT        IDC_GRIDWIDTH,109,92,45,14,ES_AUTOHSCROLL
+    GROUPBOX        "Description",IDC_STATIC,12,113,249,82
+    LTEXT           "All surface boundaries are set in meters.  This is because most topographical maps have KM wide grid markings.",IDC_STATIC,17,124,235,35
+    GROUPBOX        "Surface Boundaries",IDC_STATIC,11,32,248,79
+    LTEXT           "Grid North is normally marked on a map.  Most maps do not overlay their surface grids to true north.  Entering a Grid North allows you to use the surface grid from the maps to enter your data.",IDC_STATIC,18,163,236,25
+    LTEXT           "Note:  Height and width are in cells.  Number of entries is one greater then number of cells.",IDC_STATIC,175,45,78,58
+END
+
+IDD_EDITFIXEDPOINT DIALOG 0, 0, 222, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Fixed Point"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Station Name:",IDC_STATIC,9,9,73,9
+    EDITTEXT        IDC_STATIONTEXT,91,6,124,14,ES_AUTOHSCROLL
+    LTEXT           "Comments:",IDC_STATIC,9,23,76,8
+    EDITTEXT        IDC_EDIT1,91,23,124,36,ES_MULTILINE
+    LTEXT           "X Position (m):",IDC_STATICX,8,64,46,9
+    EDITTEXT        IDC_EDITXPOS,90,62,40,12,ES_AUTOHSCROLL
+    LTEXT           "Y Position (m):",IDC_STATICY,8,79,45,9
+    EDITTEXT        IDC_EDITYPOS,90,77,40,12,ES_AUTOHSCROLL
+    LTEXT           "Z Position (m):",IDC_STATICZ,8,94,45,9
+    EDITTEXT        IDC_EDITZPOS,89,92,40,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,164,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,164,88,50,14
+    LTEXT           "WARNING:  Although Z Position (Altitude) is measured in feet, X and Y positions are listed in meters in order to remain compatible with topographical maps, UTM coordinates, and GPS systems.",IDC_STATICWARNING,5,109,187,47
+END
+
+IDD_PREFERENCES DIALOG 0, 0, 225, 154
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Main Window",IDC_STATIC,7,7,146,40
+    CONTROL         "Show Status Bar",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,17,125,10
+    CONTROL         "Show Tool Bar",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,31,133,10
+    GROUPBOX        "View Windows",IDC_STATIC,7,51,145,50
+    CONTROL         "Show Ruler",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,61,132,10
+    CONTROL         "Show Index Tabs",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,74,131,10
+    CONTROL         "Show Compass",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,87,131,10
+    GROUPBOX        "Units",IDC_STATIC,7,107,146,40
+    CONTROL         "Meters",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,120,37,10
+    CONTROL         "Feet",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,133,30,10
+    CONTROL         "Meters and Kilometers",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,57,121,85,10
+    CONTROL         "Feet and Miles",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,57,133,86,10
+    DEFPUSHBUTTON   "OK",IDOK,168,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,168,24,50,14
+END
+
+IDD_AGECOLORHELPERDIALOG DIALOG 0, 0, 239, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Age Color Helper"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Starting Date:",IDC_STATIC,15,60,44,8
+    CONTROL         "",IDC_DATEEDIT1,"SysDateTimePick32",WS_TABSTOP,75,58,72,15
+    LTEXT           "Interval (Years):",IDC_STATIC,15,80,50,8
+    EDITTEXT        IDC_YEARS,75,80,71,14,ES_AUTOHSCROLL
+    LTEXT           "Number of Intervals (2-15):",IDC_STATIC,15,100,84,8
+    EDITTEXT        IDC_NUMINTERVALS,104,100,43,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,176,14,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,176,31,50,14
+    LTEXT           "Please enter the date for the first age bracket and the size of each age bracket in years.",IDC_STATIC,7,7,143,19
+    LTEXT           "On Station will use this information to automatically generate age coloring data.",IDC_STATIC,7,29,143,24
+END
+
+IDD_DEPTHCOLORHELPERDIALOG DIALOG 0, 0, 239, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Depth Color Helper"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Starting Depth(m):",IDC_STATICSTARTDEPTH,15,60,70,8
+    EDITTEXT        IDC_STARTINGDEPTH,89,60,57,12,ES_AUTOHSCROLL
+    LTEXT           "Interval (m):",IDC_STATICINTERVAL,15,80,70,8
+    EDITTEXT        IDC_DEPTH,89,80,57,14,ES_AUTOHSCROLL
+    LTEXT           "Number of Intervals (2-15):",IDC_STATIC,15,100,100,8
+    EDITTEXT        IDC_NUMINTERVALS,117,100,28,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,176,14,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,176,31,50,14
+    LTEXT           "Please enter the depth for the start of the highest depth bracket and the size of each bracket.",IDC_STATIC,7,7,143,25
+    LTEXT           "On Station will use this information to automatically generate age coloring data.",IDC_STATIC,7,35,143,24
+END
+
+IDD_VIEWANGLE DIALOG 0, 0, 263, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rotation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Spin (0-359):",IDC_STATIC,16,74,67,8
+    EDITTEXT        IDC_EDITROTATE,89,70,29,14,ES_AUTOHSCROLL
+    LTEXT           "Tilt (0-359):",IDC_STATIC,18,153,64,8
+    EDITTEXT        IDC_EDITELEVATE,89,150,29,14,ES_AUTOHSCROLL
+    LTEXT           "The view angle is calculated by centering, then spinning, then tilting.",IDC_STATIC,7,7,228,10
+    LTEXT           "Spin represents how much the cave is turned.  It corresponds to a compass direction.  A spin of 90 means that North is at 90 degrees (Straight Right).  A spin of 0 means that North is directly up.",IDC_STATIC,17,31,210,34
+    LTEXT           "Tilt represents how much the cave is moved off horizontal.  A tilt of 0 means you are looking from above.  90 means you are looking edge on.  180 means you are looking from below.",IDC_STATIC,13,109,217,35
+    GROUPBOX        "Spin",IDC_STATIC,7,21,233,69
+    GROUPBOX        "Tilt",IDC_STATIC,7,96,233,72
+END
+
+IDD_VIEWCENTER DIALOG 0, 0, 263, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Center"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You can set a new center for the system by entering the coordinates in the edit boxes below.  The coordinates specified will be in the middle of the view window.  All rotations are done around the center.",IDC_STATIC,8,7,248,31
+    LTEXT           "You can also center the system at or near a survey station by selecting the Center on a Station button.",IDC_STATIC,8,46,248,22
+    GROUPBOX        "Center of Screen",IDC_STATIC,9,74,200,73
+    LTEXT           "X Pos:",IDC_STATICX,16,88,41,8
+    EDITTEXT        IDC_XPAN,65,85,44,14,ES_AUTOHSCROLL
+    LTEXT           "(East-West position)",IDC_STATIC,113,86,86,8
+    LTEXT           "Y Pos:",IDC_STATICY,16,106,47,8
+    EDITTEXT        IDC_YPAN,65,104,44,14,ES_AUTOHSCROLL
+    LTEXT           "(North-South position)",IDC_STATIC,111,105,96,8
+    LTEXT           "Z Pos:",IDC_STATICZ,16,126,44,8
+    EDITTEXT        IDC_ZPAN,65,123,43,14,ES_AUTOHSCROLL
+    LTEXT           "(Up-Down position)",IDC_STATIC,113,125,89,8
+    PUSHBUTTON      "&Center on a Station...",IDC_BUTTON1,162,157,94,14
+END
+
+IDD_VIEWSCALE DIALOG 0, 0, 263, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scale"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Size: (m/cm)",IDC_STATIC2,8,74,53,8
+    EDITTEXT        IDC_SCALESIZE,67,72,54,14,ES_AUTOHSCROLL
+    LTEXT           "Please enter the size that you would like the system to be draw in.  This size will be used both on the screen and when you are printing.",IDC_STATIC1,8,6,248,29
+    LTEXT           "You can also set this value by right clicking on the ruler or by holding down SHIFT and dragging the mouse left and right.",IDC_STATIC,8,36,248,25
+    LTEXT           "(Value should be between 1m/cm and 5000m/cm)",IDC_STATIC3,27,91,217,8
+END
+
+IDD_CENTERSTATION DIALOG 0, 0, 185, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Center on Station"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Center Station:",IDC_STATIC,6,7,59,8
+    EDITTEXT        IDC_EDITSTATION,72,5,40,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,4,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,22,50,14
+    GROUPBOX        "Description",IDC_STATIC,5,39,173,48
+    LTEXT           "Type in the name of the station that will become the new center of the current view.",IDC_STATIC,9,52,164,29
+END
+
+IDD_LOOPCLOSUREWAIT DIALOGEX 0, 0, 186, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please Wait For Loop Closures..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,129,100,50,14
+    LTEXT           "On Station is currently performing loop closures.  Please be patient as this may take a few minutes.",IDC_STATIC,7,7,172,31
+    LTEXT           "To stop loop closures from happening, unselect Closed Loops from the view menu.  Pressing Cancel will stop loop closures and do this for you.",IDC_STATIC,7,39,172,36
+    CONTROL         "Progress2",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,78,78,101,14,WS_EX_STATICEDGE
+    LTEXT           "Amount Done:",IDC_STATIC,8,80,66,8
+END
+
+IDD_ABOUTBOXCREDITS DIALOG 34, 22, 269, 215
+STYLE DS_SETFONT | WS_POPUP | WS_DISABLED | WS_CAPTION
+CAPTION "Credits"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "On Station  3.1",IDC_STATICTITLE,79,11,130,15
+    CTEXT           "Copyright (c)  1995-2000\nTaco van Ieperen",IDC_STATICAUTHOR,80,30,130,22
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,7,7,67,49
+    LTEXT           "Chief Developer:",IDC_STATICDEVELOPER,17,100,229,10
+    LTEXT           "Taco van Ieperen   (tacovan@smarttech.com)",IDC_STATIC,25,115,164,9
+    LTEXT           "Loop Closure Math and Coding:",IDC_STATICLOOPS,17,131,247,10
+    LTEXT           "Piere Lebel",IDC_STATIC,24,146,206,13
+    LTEXT           "On Station is written entirely by volunteers.  The Source code is freely available if you would like to contribute.  See the WWW tab in this dialog to connect you directly to the On Station Web Site.",IDC_STATIC,8,64,234,26
+END
+
+IDD_ABOUTBOXSUMMARY DIALOG 34, 22, 269, 215
+STYLE DS_SETFONT | WS_POPUP | WS_DISABLED | WS_CAPTION
+CAPTION "Summary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "On Station  3.1",IDC_STATICTITLE,79,11,130,15
+    CTEXT           "Copyright (c)  1995-2000\nTaco van Ieperen",IDC_STATICAUTHOR,80,30,130,22
+    CTEXT           "On Station is designed to help you keep track of the survey data which you collect while exploring a cave system.  It has comprehensive facilities for storing your survey measurements and organizing them in a logical manner.",IDC_STATIC,5,66,261,29
+    CTEXT           "In addition to its strong storage and retreival features, On Station has world class drawing capabilities.  You are able to draw your cave system and the surrounding surface  using a number of different colors  and drawing options.",IDC_STATIC,5,103,262,26
+    CTEXT           "On Station's loop closure capabilites allow you to automatically correct errors in loops (sections of the cave which are reached two different ways).  This allows you to use on Station to process your data as a starting point for published maps .",IDC_STATIC,5,135,261,33
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,7,7,71,54
+    LTEXT           "On Station's Query capabilities are unmatched.  You can use On Station to show leads, color surveys according to who was on them, and so forth.  Anything that you can type as a query using AND and OR terms can be displayed by On Station.",IDC_STATIC,8,171,259,35
+END
+
+IDD_ORPHANDIALOG DIALOG 0, 0, 297, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "View Orphaned Shots"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,229,151,61,14
+    LTEXT           "A number of survey shots were found that were not connected to anything in the system.  This could be because they are marked as disabled, or because of missing fixed points.  I list one shot from each orphaned section below.",IDC_STATIC,7,7,283,27
+    LISTBOX         IDC_LIST1,6,48,216,117,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Orphaned Shots:",IDC_STATIC,7,37,112,8
+    PUSHBUTTON      "Fixed Points",IDC_BUTTON1,229,47,61,14
+    PUSHBUTTON      "Edit Survey...",IDC_BUTTON2,229,69,61,14
+END
+
+IDD_FOLDERINFOBYVIEW DIALOG 0, 0, 245, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Information on Current View"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,183,183,50,14
+    GROUPBOX        "Underground Survey Information",IDC_STATIC,5,4,229,83
+    LTEXT           "Total Number of Shots",IDC_STATIC,12,16,136,8
+    LTEXT           "Static",IDC_NUMSHOTS,175,16,46,8
+    LTEXT           "Static",IDC_TOTALLENGTH,175,28,46,8
+    LTEXT           "Total Length of System",IDC_STATIC,12,28,152,8
+    LTEXT           "Total Number of Shots",IDC_STATIC,11,105,148,8
+    LTEXT           "Total Surface Survey",IDC_STATIC,11,117,149,8
+    LTEXT           "Static",IDC_NUMSURFACESHOTS,174,103,46,8
+    LTEXT           "NOTE:  This information only applies to the current view.  Anything which is not drawn in this view is not included in the totals or the calculation of the height and depth.  Select Info in the Edit dialog to get information on everything.",IDC_STATIC,7,138,228,33
+    GROUPBOX        "Surface Survey Information",IDC_STATIC,6,94,229,37
+    LTEXT           "Static",IDC_TOTALSURFACELENGTH,174,116,46,8
+    LTEXT           "Static",IDC_HIGHESTPOINT,141,52,85,8
+    LTEXT           "Deepest Point",IDC_STATIC,13,64,122,8
+    LTEXT           "Highest Point:",IDC_STATIC,13,52,120,8
+    LTEXT           "Static",IDC_DEEPESTPOINT,141,64,85,8
+    LTEXT           "Horizontal Length of System",IDC_STATIC,13,40,115,9
+    LTEXT           "Static",IDC_HORIZONTALLENGTH,175,40,46,8
+END
+
+IDD_BOOKMARKS DIALOG 0, 0, 217, 138
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bookmark"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,8,7,41,8
+    COMBOBOX        IDC_BOOKMARKCOMBO,52,7,99,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_BOOKMARKLIST,7,21,144,84,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADD,160,7,50,14
+    LTEXT           "",IDC_STATICROTATION,55,121,134,8
+    DEFPUSHBUTTON   "Close",IDCANCEL,160,26,50,14
+    PUSHBUTTON      "Delete",IDC_DELETE,160,45,50,14
+    PUSHBUTTON      "Go To",IDC_GOTO,160,65,50,14
+    LTEXT           "Panning:",IDC_STATIC,9,107,45,8
+    LTEXT           "",IDC_STATICPANNING,55,107,133,8
+    LTEXT           "Rotation:",IDC_STATIC,9,121,44,8
+END
+
+IDD_TITLEPAGESETUP DIALOG 0, 0, 240, 209
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup Title Page"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Title:",IDC_STATIC,9,9,44,8
+    EDITTEXT        IDC_EDITTITLE,56,6,177,15,ES_AUTOHSCROLL
+    LTEXT           "Location:",IDC_STATIC,8,29,44,8
+    EDITTEXT        IDC_EDIT2,55,27,179,14,ES_AUTOHSCROLL
+    LTEXT           "Sizes:",IDC_STATIC,9,47,41,8
+    EDITTEXT        IDC_EDIT4,55,44,178,14,ES_AUTOHSCROLL
+    LTEXT           "Surveyed:",IDC_STATIC,7,63,45,8
+    EDITTEXT        IDC_EDIT3,55,63,178,83,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Comments:",IDC_STATIC,6,152,36,8
+    EDITTEXT        IDC_EDIT5,41,151,190,31,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "OK",IDOK,125,188,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,183,188,50,14
+END
+
+IDD_HOWMANYDEPTHINTERVALS DIALOG 0, 0, 186, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auto Configure Depth Colors"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "Please enter the number of levels that you wish to split the cave into. ",IDC_STATIC,7,8,117,22
+    LTEXT           "Number of Levels:  (2-15)",IDC_STATIC,8,50,113,8
+    EDITTEXT        IDC_EDIT2,127,46,40,14,ES_AUTOHSCROLL
+END
+
+IDD_SEARCHCOMMENTSDIALOG DIALOG 0, 0, 307, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Search Through Comments"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Draw Results",IDOK,250,11,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,250,36,50,14
+    LTEXT           "Comment Type:",IDC_STATIC,14,18,64,8
+    COMBOBOX        IDC_COMBO1,81,18,73,70,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Search Conditions",IDC_STATIC,7,7,235,79
+    LTEXT           "Comment Text:",IDC_STATIC,13,57,65,8
+    EDITTEXT        IDC_EDIT2,81,54,156,14,ES_AUTOHSCROLL
+    CTEXT           "Example: (lead AND excellent) OR continues",IDC_STATIC,16,73,216,8
+    GROUPBOX        "Display Options",IDC_STATIC,7,91,236,75
+    CONTROL         "Place a Tag on the station",IDC_PLACETAG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,103,122,10
+    CONTROL         "Color To Shot",IDC_COLORTOSHOT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,117,122,10
+    CONTROL         "Color From Shot",IDC_COLORFROMSHOT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,130,130,10
+    LTEXT           "Color:",IDC_STATIC,141,104,19,8
+    CONTROL         "",IDC_COLORSTATIC,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,167,104,66,56
+    PUSHBUTTON      "List Results...",IDC_DISPLAYRESULTS,171,17,64,14
+    CTEXT           "(Comments can get types by using the format Type:Comment.)",IDC_STATIC,15,33,220,18
+END
+
+IDD_PASSAGE_OPTIONS DIALOG 0, 0, 260, 109
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Drawing Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,203,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,203,27,50,14
+    LTEXT           "Passage Type:",IDC_STATIC,10,8,68,8
+    COMBOBOX        IDC_COMBO2,83,7,96,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Rendering Properties (Solid Passages only)",IDC_STATIC,7,41,246,60
+    CONTROL         "Realistic Lighting",IDC_MULTIPLELIGHTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,54,212,10
+    CONTROL         "Disable Lights when Rotating",IDC_DISABLELIGHTROTATE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,83,218,10
+    CONTROL         "Rotate Wire-Frames",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,68,219,10
+END
+
+IDD_TIP DIALOG 0, 0, 288, 166
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip of the Day"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Some String",IDC_TIPSTRING,25,63,182,60
+    CONTROL         "Show Tips on StartUp",IDC_STARTUP,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,146,126,10
+    PUSHBUTTON      "Next Tip",IDC_NEXTTIP,147,145,70,14,WS_GROUP
+    DEFPUSHBUTTON   "Close",IDOK,231,145,50,14,WS_GROUP
+    CONTROL         "",IDC_BULB,"Static",SS_BLACKFRAME,20,17,190,111
+END
+
+IDD_SEARCHSURVEYS DIALOG 0, 0, 307, 204
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Query Surveys"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Survey Name:",IDC_STATIC,14,18,50,8
+    EDITTEXT        IDC_EDIT6,69,16,167,14,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,14,36,48,8
+    EDITTEXT        IDC_EDIT2,69,34,167,14,ES_AUTOHSCROLL
+    LTEXT           "Personnel:",IDC_STATIC,14,54,53,8
+    EDITTEXT        IDC_EDIT1,69,52,167,14,ES_AUTOHSCROLL
+    LTEXT           "Stations:",IDC_STATIC,14,72,53,8
+    EDITTEXT        IDC_EDIT3,69,70,167,14,ES_AUTOHSCROLL
+    LTEXT           "Date:",IDC_STATIC,14,90,47,8
+    COMBOBOX        IDC_COMBO1,69,88,53,52,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_DATEEDIT1,"SysDateTimePick32",WS_TABSTOP,133,87,102,15
+    CONTROL         "",IDC_DATEEDIT2,"SysDateTimePick32",WS_TABSTOP,133,107,102,15
+    CONTROL         "Use OR to Combine terms?",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,142,212,10
+    DEFPUSHBUTTON   "Results...",IDC_DISPLAYRESULTS,250,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,250,29,50,14
+    GROUPBOX        "Search Conditions",IDC_STATIC,7,3,235,159
+    LTEXT           "All text fields can contain standard search syntax: examples-\n\t(lead AND excellent) OR continues\n\t""John Doe"" AND NOT ""Bob White""",IDC_STATIC,9,173,234,24
+END
+
+IDD_OVERALLDATAVIEW DIALOGEX 0, 0, 158, 272
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Color Scheme:",-1,6,8,47,8
+    COMBOBOX        IDC_COMBO1,59,6,89,119,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Configure Colors...",ID_EDIT_CONFIGURECOLORS,83,23,66,14,NOT WS_VISIBLE
+    CONTROL         "Generic1",IDC_SURVEYLIST,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,5,50,144,191,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    LTEXT           "Slot",IDC_COLORSLOT,5,23,144,23,NOT WS_VISIBLE
+    LTEXT           "No Current Query",IDC_STATICQUERYTEXT,5,245,144,23,NOT WS_VISIBLE
+END
+
+IDD_ABOUTBOXWEB DIALOG 34, 22, 269, 215
+STYLE DS_SETFONT | WS_POPUP | WS_DISABLED | WS_CAPTION
+CAPTION "WWW"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "On Station  3.1",IDC_STATICTITLE,79,11,130,15
+    CTEXT           "Copyright (c)  1995-2000\nTaco van Ieperen",IDC_STATICAUTHOR,80,30,130,22
+    CTEXT           "The On Station Web site provides you with sample files, bug fixes, and answers to common problems.  Click on the button below to be connected automatically to the On Station Web Site.  (http://members.home.net/tacovan)",IDC_STATIC,5,66,261,29
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,7,7,71,54
+    PUSHBUTTON      "Connect",IDC_BUTTON1,41,101,50,14
+    LTEXT           "On Station home page main index.",IDC_STATIC,103,102,155,8
+    LTEXT           "Download new Versions",IDC_STATIC,103,128,155,8
+    LTEXT           "Get the source code",IDC_STATIC,103,141,155,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+    END
+
+    IDD_AGECOLORS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_DEPTHCOLORS, DIALOG
+    BEGIN
+        HORZGUIDE, 57
+    END
+
+    IDD_EDITSETTINGSPAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_GRIDPAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_INSTRUMENTPAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_PEOPLEPAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_SEARCHRESULT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 269
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_SUMMARYPAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_EDITFIXEDPOINT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 197
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_AGECOLORHELPERDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DEPTHCOLORHELPERDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_VIEWANGLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_VIEWCENTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_VIEWSCALE, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 256
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_LOOPCLOSUREWAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_ABOUTBOXCREDITS, DIALOG
+    BEGIN
+    END
+
+    IDD_ABOUTBOXSUMMARY, DIALOG
+    BEGIN
+    END
+
+    IDD_ORPHANDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_BOOKMARKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_TITLEPAGESETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_HOWMANYDEPTHINTERVALS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_SEARCHCOMMENTSDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_PASSAGE_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_TIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_SEARCHSURVEYS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_OVERALLDATAVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 149
+        BOTTOMMARGIN, 268
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PAGELAYOUT DLGINIT
+BEGIN
+    IDC_COMBOOVERLAP, 0x403, 2, 0
+0x0030, 
+    IDC_COMBOOVERLAP, 0x403, 2, 0
+0x0035, 
+    IDC_COMBOOVERLAP, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_COMBOOVERLAP, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_COMBOOVERLAP, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_COMBOOVERLAP, 0x403, 3, 0
+0x3532, "\000" 
+    IDC_COMBOOVERLAP, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_COMBOOVERLAP, 0x403, 4, 0
+0x3031, 0x0030, 
+    0
+END
+
+IDD_PEOPLEPAGE DLGINIT
+BEGIN
+    IDC_JOB1, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    IDC_JOB2, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    IDC_JOB3, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    IDC_JOB4, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    IDC_JOB5, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    IDC_JOB6, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    0
+END
+
+IDD_PASSAGE_OPTIONS DLGINIT
+BEGIN
+    IDC_COMBO2, 0x403, 10, 0
+0x694c, 0x656e, 0x5020, 0x6f6c, 0x0074, 
+    IDC_COMBO2, 0x403, 8, 0
+0x6548, 0x6769, 0x7468, 0x0073, 
+    IDC_COMBO2, 0x403, 7, 0
+0x6957, 0x7464, 0x7368, "\000" 
+    IDC_COMBO2, 0x403, 15, 0
+0x7243, 0x736f, 0x2073, 0x6553, 0x7463, 0x6f69, 0x736e, "\000" 
+    IDC_COMBO2, 0x403, 26, 0
+0x6946, 0x6578, 0x2064, 0x6953, 0x657a, 0x5320, 0x6c6f, 0x6469, 0x5020, 
+0x7361, 0x6173, 0x6567, 0x0073, 
+    IDC_COMBO2, 0x403, 25, 0
+0x4455, 0x524c, 0x5320, 0x7a69, 0x2065, 0x6f53, 0x696c, 0x2064, 0x6150, 
+0x7373, 0x6761, 0x7365, "\000" 
+    0
+END
+
+IDD_SURFACEALTITUDES DLGINIT
+BEGIN
+    IDC_SURFACEALTITUDEGRID, 0x376, 164, 0
+0x0024, 0x0000, 0x0041, 0x0036, 0x0044, 0x0041, 0x0038, 0x0035, 0x0038, 
+0x0030, 0x002d, 0x0035, 0x0039, 0x0044, 0x0036, 0x002d, 0x0031, 0x0030, 
+0x0031, 0x0042, 0x002d, 0x0041, 0x0033, 0x0043, 0x0039, 0x002d, 0x0030, 
+0x0038, 0x0030, 0x0030, 0x0032, 0x0042, 0x0032, 0x0046, 0x0034, 0x0039, 
+0x0046, 0x0042, 0x0000, 0x0001, 0x2796, 0x0000, 0x1d0b, 0x0000, 0x004d, 
+0x0000, 0x0000, 0x0000, 0xffff, 0x00ff, 0x0300, 0xe352, 0x910b, 0xce8f, 
+0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 0x9000, 0x4401, 0x0142, 
+0x0d00, 0x534d, 0x5320, 0x6e61, 0x2073, 0x6553, 0x6972, 0x0166, 0x0001, 
+0x0005, 0x0005, 0x0001, 0x0001, 0x0003, 0x0101, 0x0000, 0x0100, 0x0000, 
+0x00ff, 
+    0
+END
+
+IDD_SEARCHSURVEYS DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 33, 0
+0x4e45, 0x4554, 0x2052, 0x5449, 0x4d45, 0x2053, 0x414d, 0x554e, 0x4c41, 
+0x2059, 0x524f, 0x4920, 0x2054, 0x4353, 0x4552, 0x5357, "\000" 
+    IDC_COMBO1, 0x403, 24, 0
+0x5055, 0x4920, 0x544e, 0x5245, 0x414e, 0x4954, 0x4e4f, 0x4c41, 0x5a49, 
+0x5441, 0x4f49, 0x004e, 
+    IDC_DATEEDIT1, 0x376, 292, 0
+0x005c, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0035, 0x0020, 0x004d, 0x0069, 0x0063, 0x0072, 0x006f, 0x0064, 
+0x0079, 0x006e, 0x0065, 0x0020, 0x0044, 0x0065, 0x0076, 0x0065, 0x006c, 
+0x006f, 0x0070, 0x006d, 0x0065, 0x006e, 0x0074, 0x0020, 0x0054, 0x0065, 
+0x0063, 0x0068, 0x006e, 0x006f, 0x006c, 0x006f, 0x0067, 0x0069, 0x0065, 
+0x0073, 0x000d, 0x000a, 0x004c, 0x0069, 0x0063, 0x0065, 0x006e, 0x0063, 
+0x0065, 0x0020, 0x004e, 0x0075, 0x006d, 0x0062, 0x0065, 0x0072, 0x003a, 
+0x0020, 0x2d31, 0x3435, 0x3030, 0x3030, 0x2d30, 0x3233, 0x3133, 0x302d, 
+0x3030, 0x3030, 0x0032, 0x0058, 0x0058, 0x0058, 0x002d, 0x0058, 0x0058, 
+0x0058, 0x0058, 0x0058, 0x0058, 0x0005, 0x0001, 0x0fd0, 0x0000, 0x027b, 
+0x0000, 0x004d, 0x0000, 0x0008, 0x8000, 0x0005, 0x8000, 0x0300, 0xe352, 
+0x910b, 0xce8f, 0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 0x9000, 
+0x4401, 0x0142, 0x0d00, 0x534d, 0x5320, 0x6e61, 0x2073, 0x6553, 0x6972, 
+0x0166, 0x0002, 0x0001, 0x0001, 0x0001, 0x0100, 0x0000, 0x0000, 0x51a0, 
+0x40e1, 0x2f01, 0x0005, 0x8000, 0x0008, 0x8000, 0x0000, 0x0000, 0x0000, 
+0x43a8, 0x0044, 
+    IDC_DATEEDIT2, 0x376, 292, 0
+0x005c, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0035, 0x0020, 0x004d, 0x0069, 0x0063, 0x0072, 0x006f, 0x0064, 
+0x0079, 0x006e, 0x0065, 0x0020, 0x0044, 0x0065, 0x0076, 0x0065, 0x006c, 
+0x006f, 0x0070, 0x006d, 0x0065, 0x006e, 0x0074, 0x0020, 0x0054, 0x0065, 
+0x0063, 0x0068, 0x006e, 0x006f, 0x006c, 0x006f, 0x0067, 0x0069, 0x0065, 
+0x0073, 0x000d, 0x000a, 0x004c, 0x0069, 0x0063, 0x0065, 0x006e, 0x0063, 
+0x0065, 0x0020, 0x004e, 0x0075, 0x006d, 0x0062, 0x0065, 0x0072, 0x003a, 
+0x0020, 0x2d31, 0x3435, 0x3030, 0x3030, 0x2d30, 0x3233, 0x3133, 0x302d, 
+0x3030, 0x3030, 0x0032, 0x0058, 0x0058, 0x0058, 0x002d, 0x0058, 0x0058, 
+0x0058, 0x0058, 0x0058, 0x0058, 0x0005, 0x0001, 0x0fd0, 0x0000, 0x027b, 
+0x0000, 0x004d, 0x0000, 0x0008, 0x8000, 0x0005, 0x8000, 0x0300, 0xe352, 
+0x910b, 0xce8f, 0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 0x9000, 
+0x4401, 0x0142, 0x0d00, 0x534d, 0x5320, 0x6e61, 0x2073, 0x6553, 0x6972, 
+0x0166, 0x0002, 0x0001, 0x0001, 0x0001, 0x0100, 0x0000, 0x0000, 0x51a0, 
+0x40e1, 0x2f01, 0x0005, 0x8000, 0x0008, 0x8000, 0x0000, 0x0000, 0x0000, 
+0x43a8, 0x0044, 
+    0
+END
+
+IDD_SAVEFORMATTEDTEXTFILE DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 45, 0
+0x4f44, 0x544e, 0x4320, 0x4148, 0x474e, 0x2045, 0x4548, 0x4552, 0x202e, 
+0x4920, 0x2054, 0x454d, 0x5353, 0x5345, 0x5520, 0x2050, 0x5254, 0x4e41, 
+0x4c53, 0x5441, 0x4f49, 0x534e, "\000" 
+    0
+END
+
+IDD_SUMMARYPAGE DLGINIT
+BEGIN
+    IDC_DATEEDIT1, 0x376, 284, 0
+0x005c, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0035, 0x0020, 0x004d, 0x0069, 0x0063, 0x0072, 0x006f, 0x0064, 
+0x0079, 0x006e, 0x0065, 0x0020, 0x0044, 0x0065, 0x0076, 0x0065, 0x006c, 
+0x006f, 0x0070, 0x006d, 0x0065, 0x006e, 0x0074, 0x0020, 0x0054, 0x0065, 
+0x0063, 0x0068, 0x006e, 0x006f, 0x006c, 0x006f, 0x0067, 0x0069, 0x0065, 
+0x0073, 0x000d, 0x000a, 0x004c, 0x0069, 0x0063, 0x0065, 0x006e, 0x0063, 
+0x0065, 0x0020, 0x004e, 0x0075, 0x006d, 0x0062, 0x0065, 0x0072, 0x003a, 
+0x0020, 0x2d31, 0x3435, 0x3030, 0x3030, 0x2d30, 0x3233, 0x3133, 0x302d, 
+0x3030, 0x3030, 0x0032, 0x0058, 0x0058, 0x0058, 0x002d, 0x0058, 0x0058, 
+0x0058, 0x0058, 0x0058, 0x0058, 0x0005, 0x0001, 0x0c18, 0x0000, 0x022c, 
+0x0000, 0x004d, 0x0000, 0x0008, 0x8000, 0x0005, 0x8000, 0x0300, 0xe352, 
+0x910b, 0xce8f, 0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 0x9000, 
+0xa801, 0x0142, 0x0d00, 0x534d, 0x5320, 0x6e61, 0x2073, 0x6553, 0x6972, 
+0x0166, 0x0002, 0x0001, 0x0001, 0x0001, 0x0100, 0x0000, 0x0000, 0x5180, 
+0x40e1, 0x2f01, 0x0005, 0x8000, 0x0008, 0x8000, 0x0000, 
+    0
+END
+
+IDD_AGECOLORHELPERDIALOG DLGINIT
+BEGIN
+    IDC_DATEEDIT1, 0x376, 288, 0
+0x005c, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0035, 0x0020, 0x004d, 0x0069, 0x0063, 0x0072, 0x006f, 0x0064, 
+0x0079, 0x006e, 0x0065, 0x0020, 0x0044, 0x0065, 0x0076, 0x0065, 0x006c, 
+0x006f, 0x0070, 0x006d, 0x0065, 0x006e, 0x0074, 0x0020, 0x0054, 0x0065, 
+0x0063, 0x0068, 0x006e, 0x006f, 0x006c, 0x006f, 0x0067, 0x0069, 0x0065, 
+0x0073, 0x000d, 0x000a, 0x004c, 0x0069, 0x0063, 0x0065, 0x006e, 0x0063, 
+0x0065, 0x0020, 0x004e, 0x0075, 0x006d, 0x0062, 0x0065, 0x0072, 0x003a, 
+0x0020, 0x2d31, 0x3435, 0x3030, 0x3030, 0x2d30, 0x3233, 0x3133, 0x302d, 
+0x3030, 0x3030, 0x0032, 0x0058, 0x0058, 0x0058, 0x002d, 0x0058, 0x0058, 
+0x0058, 0x0058, 0x0058, 0x0058, 0x0005, 0x0001, 0x0b2a, 0x0000, 0x027b, 
+0x0000, 0x004d, 0x0000, 0x0008, 0x8000, 0x0005, 0x8000, 0x0300, 0xe352, 
+0x910b, 0xce8f, 0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 0x9000, 
+0x4401, 0x0142, 0x0d00, 0x534d, 0x5320, 0x6e61, 0x2073, 0x6553, 0x6972, 
+0x0166, 0x0002, 0x0001, 0x0001, 0x0001, 0x0100, 0x0000, 0x0000, 0x51a0, 
+0x40e1, 0x2f01, 0x0005, 0x8000, 0x0008, 0x8000, 0x0000, 0x9a44, 0x0053, 
+
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAGDROP            CURSOR                  "DRAGDROP.CUR"
+IDC_DRAGDROPBAD         CURSOR                  "cur00001.cur"
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "OnStation.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#include "afxprint.rc"    // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

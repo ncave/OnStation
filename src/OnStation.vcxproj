@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1C4FFC05-E898-428A-A54C-112CDD16C8E3}</ProjectGuid>
+    <RootNamespace>OnStation</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>opengl32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutBoxSummary.cpp" />
+    <ClCompile Include="aboutcopyrightpage.cpp" />
+    <ClCompile Include="AboutCreditsDialog.cpp" />
+    <ClCompile Include="AboutSheet.cpp" />
+    <ClCompile Include="AboutWeb.cpp" />
+    <ClCompile Include="AgeColorHelper.cpp" />
+    <ClCompile Include="AgeColorPage.cpp" />
+    <ClCompile Include="BlunderDialog.cpp" />
+    <ClCompile Include="Bookmark.cpp" />
+    <ClCompile Include="BookmarkDialog.cpp" />
+    <ClCompile Include="CenterPage.cpp" />
+    <ClCompile Include="CenterStationNameDialog.cpp" />
+    <ClCompile Include="Clipboard.cpp" />
+    <ClCompile Include="ColorSchemeComboBox.cpp" />
+    <ClCompile Include="ColorSheet.cpp" />
+    <ClCompile Include="ColorTool.cpp" />
+    <ClCompile Include="ColorWidget.cpp" />
+    <ClCompile Include="Comment.cpp" />
+    <ClCompile Include="CompassWidget.cpp" />
+    <ClCompile Include="DebugStationLinksDialog.cpp" />
+    <ClCompile Include="DepthColorHelperDialog.cpp" />
+    <ClCompile Include="DepthColorPage.cpp" />
+    <ClCompile Include="DepthLevelDialog.cpp" />
+    <ClCompile Include="DistanceBetweenDialog.cpp" />
+    <ClCompile Include="EditableGrid.cpp" />
+    <ClCompile Include="EditFixedPointDialog.cpp" />
+    <ClCompile Include="FileDump.cpp" />
+    <ClCompile Include="FileHelper.cpp" />
+    <ClCompile Include="FixedPoint.cpp" />
+    <ClCompile Include="Folder.cpp" />
+    <ClCompile Include="FolderInfoDlg.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="GridCtrl\GridCell.cpp" />
+    <ClCompile Include="GridCtrl\GridCellBase.cpp" />
+    <ClCompile Include="GridCtrl\GridCtrl.cpp" />
+    <ClCompile Include="GridCtrl\GridDropTarget.cpp" />
+    <ClCompile Include="GridCtrl\InPlaceEdit.cpp" />
+    <ClCompile Include="GridCtrl\TitleTip.cpp" />
+    <ClCompile Include="Gworld.cpp" />
+    <ClCompile Include="GworldOpengl.cpp" />
+    <ClCompile Include="Hitlist.cpp" />
+    <ClCompile Include="InfoByViewDialog.cpp" />
+    <ClCompile Include="Jpclose.cpp" />
+    <ClCompile Include="JunctionBox.cpp" />
+    <ClCompile Include="legeditorsettingspage.cpp" />
+    <ClCompile Include="legeditsheet.cpp" />
+    <ClCompile Include="leggridpage.cpp" />
+    <ClCompile Include="leginstrumentspage.cpp" />
+    <ClCompile Include="legpeoplepage.cpp" />
+    <ClCompile Include="legquery.cpp" />
+    <ClCompile Include="legsummarypage.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MathStuff.cpp" />
+    <ClCompile Include="NameList.cpp" />
+    <ClCompile Include="NewFolderDlg.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NodePositionInfo.cpp" />
+    <ClCompile Include="Nodetree.cpp" />
+    <ClCompile Include="OnStation.cpp" />
+    <ClCompile Include="OnStationDoc.cpp" />
+    <ClCompile Include="OnStationSurveyTree.cpp" />
+    <ClCompile Include="OnStationView.cpp" />
+    <ClCompile Include="OrphanedShotDialog.cpp" />
+    <ClCompile Include="OverallDataView.cpp" />
+    <ClCompile Include="PageLayoutPreferences.cpp" />
+    <ClCompile Include="PassageOptions.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="Preferences.cpp" />
+    <ClCompile Include="query.cpp" />
+    <ClCompile Include="realfolder.cpp" />
+    <ClCompile Include="Ruler.cpp" />
+    <ClCompile Include="saveformattedtext.cpp" />
+    <ClCompile Include="SearchCommentsDialog.cpp" />
+    <ClCompile Include="searchresultdlg.cpp" />
+    <ClCompile Include="SetExactViewSheet.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="surfacedata.cpp" />
+    <ClCompile Include="surfaceeditpage.cpp" />
+    <ClCompile Include="surfacepropertysheet.cpp" />
+    <ClCompile Include="surfacesizepage.cpp" />
+    <ClCompile Include="surveyleg.cpp" />
+    <ClCompile Include="SurveySearchDialog.cpp" />
+    <ClCompile Include="surveyshot.cpp" />
+    <ClCompile Include="TipDialog.cpp" />
+    <ClCompile Include="TitleBoxSetup.cpp" />
+    <ClCompile Include="TreeHelper.cpp" />
+    <ClCompile Include="viewanglepage.cpp" />
+    <ClCompile Include="ViewScalePage.cpp" />
+    <ClCompile Include="Viewtab.cpp" />
+    <ClCompile Include="WaitForClosureDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutBoxSummary.h" />
+    <ClInclude Include="AboutCopyrightPage.h" />
+    <ClInclude Include="AboutCreditsDialog.h" />
+    <ClInclude Include="AboutSheet.h" />
+    <ClInclude Include="AboutWeb.h" />
+    <ClInclude Include="AgeColorHelper.h" />
+    <ClInclude Include="AgeColorPage.h" />
+    <ClInclude Include="BlunderDialog.h" />
+    <ClInclude Include="Bookmark.h" />
+    <ClInclude Include="BookmarkDialog.h" />
+    <ClInclude Include="CenterPage.h" />
+    <ClInclude Include="CenterStationNameDialog.h" />
+    <ClInclude Include="Clipboard.h" />
+    <ClInclude Include="ColorSchemeComboBox.h" />
+    <ClInclude Include="ColorSheet.h" />
+    <ClInclude Include="ColorTool.h" />
+    <ClInclude Include="ColorWidget.h" />
+    <ClInclude Include="Comment.h" />
+    <ClInclude Include="CompassWidget.h" />
+    <ClInclude Include="DebugStationLinksDialog.h" />
+    <ClInclude Include="DepthColorHelperDialog.h" />
+    <ClInclude Include="DepthColorPage.h" />
+    <ClInclude Include="DepthLevelDialog.h" />
+    <ClInclude Include="DistanceBetweenDialog.h" />
+    <ClInclude Include="EditableGrid.h" />
+    <ClInclude Include="EditFixedPointDialog.h" />
+    <ClInclude Include="FileDump.h" />
+    <ClInclude Include="FileHelper.h" />
+    <ClInclude Include="FixedPoint.h" />
+    <ClInclude Include="Folder.h" />
+    <ClInclude Include="FolderInfoDlg.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="GlobalConfig.h" />
+    <ClInclude Include="GridCtrl\CellRange.h" />
+    <ClInclude Include="GridCtrl\GridCell.h" />
+    <ClInclude Include="GridCtrl\GridCellBase.h" />
+    <ClInclude Include="GridCtrl\GridCtrl.h" />
+    <ClInclude Include="GridCtrl\GridDropTarget.h" />
+    <ClInclude Include="GridCtrl\InPlaceEdit.h" />
+    <ClInclude Include="GridCtrl\MemDC.h" />
+    <ClInclude Include="GridCtrl\TitleTip.h" />
+    <ClInclude Include="Gworld.h" />
+    <ClInclude Include="GworldOpengl.h" />
+    <ClInclude Include="Hitlist.h" />
+    <ClInclude Include="InfoByViewDialog.h" />
+    <ClInclude Include="Jpclose.h" />
+    <ClInclude Include="JunctionBox.h" />
+    <ClInclude Include="LanguageHelper.h" />
+    <ClInclude Include="legeditorsettingspage.h" />
+    <ClInclude Include="legeditsheet.h" />
+    <ClInclude Include="leggridpage.h" />
+    <ClInclude Include="leginstrumentspage.h" />
+    <ClInclude Include="legpeoplepage.h" />
+    <ClInclude Include="legpreviewpage.h" />
+    <ClInclude Include="legquery.h" />
+    <ClInclude Include="legsummarypage.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MathStuff.h" />
+    <ClInclude Include="myafxres.h" />
+    <ClInclude Include="NameList.h" />
+    <ClInclude Include="NewFolderDlg.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NodePositionInfo.h" />
+    <ClInclude Include="NodeTree.h" />
+    <ClInclude Include="OnStation.h" />
+    <ClInclude Include="OnStationDoc.h" />
+    <ClInclude Include="OnStationSurveyTree.h" />
+    <ClInclude Include="OnStationView.h" />
+    <ClInclude Include="OrphanedShotDialog.h" />
+    <ClInclude Include="OverallDataView.h" />
+    <ClInclude Include="PageLayoutPreferences.h" />
+    <ClInclude Include="PassageOptions.h" />
+    <ClInclude Include="PassageViewDialog.h" />
+    <ClInclude Include="picture.h" />
+    <ClInclude Include="Preferences.h" />
+    <ClInclude Include="query.h" />
+    <ClInclude Include="realfolder.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Ruler.h" />
+    <ClInclude Include="saveformattedtext.h" />
+    <ClInclude Include="SearchCommentsDialog.h" />
+    <ClInclude Include="searchresultdlg.h" />
+    <ClInclude Include="sefhelper.h" />
+    <ClInclude Include="SetExactViewSheet.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="surfacedata.h" />
+    <ClInclude Include="surfaceeditpage.h" />
+    <ClInclude Include="surfacepropertysheet.h" />
+    <ClInclude Include="surfacesizepage.h" />
+    <ClInclude Include="surveyleg.h" />
+    <ClInclude Include="SurveySearchDialog.h" />
+    <ClInclude Include="surveyshot.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TipDialog.h" />
+    <ClInclude Include="TipOfTheDay.h" />
+    <ClInclude Include="TitleBoxSetup.h" />
+    <ClInclude Include="TreeHelper.h" />
+    <ClInclude Include="viewanglepage.h" />
+    <ClInclude Include="viewscalepage.h" />
+    <ClInclude Include="Viewtab.h" />
+    <ClInclude Include="WaitForClosureDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RATSNEST.cdi">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="res\BITMAP1.bmp" />
+    <None Include="res\bitmap3.bmp" />
+    <None Include="res\bitmappi.bmp" />
+    <None Include="res\BMFOLDER.bmp" />
+    <None Include="res\bmp00001.bmp" />
+    <None Include="res\bmp00002.bmp" />
+    <None Include="res\bmp00003.bmp" />
+    <None Include="res\bmp00004.bmp" />
+    <None Include="res\bmp00005.bmp" />
+    <None Include="res\bmp00006.bmp" />
+    <None Include="res\bmp00007.bmp" />
+    <None Include="res\bmp00008.bmp" />
+    <None Include="res\compass.bmp" />
+    <None Include="res\cur00001.cur" />
+    <None Include="res\downarrowd.bmp" />
+    <None Include="res\downarrowu.bmp" />
+    <None Include="res\DRAGDROP.cur" />
+    <None Include="res\help.cur" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\idr_onst.ico" />
+    <None Include="res\litebulb.bmp" />
+    <None Include="res\mainfram.bmp" />
+    <None Include="res\move4way.cur" />
+    <None Include="res\nodrop.cur" />
+    <None Include="res\OnStation.ico" />
+    <None Include="res\OnStation.rc2" />
+    <None Include="res\OnStationDoc.ico" />
+    <None Include="res\Rotleftd.bmp" />
+    <None Include="res\rotleftu.bmp" />
+    <None Include="res\rotrightd.bmp" />
+    <None Include="res\rotrightu.bmp" />
+    <None Include="res\sarrows.cur" />
+    <None Include="res\spinbmp1.bmp" />
+    <None Include="res\splith.cur" />
+    <None Include="res\splitv.cur" />
+    <None Include="res\TITLEIMA.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="res\trck4way.cur" />
+    <None Include="res\trcknesw.cur" />
+    <None Include="res\trckns.cur" />
+    <None Include="res\trcknwse.cur" />
+    <None Include="res\trckwe.cur" />
+    <None Include="res\uparrowd.bmp" />
+    <None Include="res\uparrowu.bmp" />
+    <None Include="OnStation.reg" />
+    <None Include="ReadMe.txt">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="tips.txt">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\OnStation.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="res\OnStation.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
